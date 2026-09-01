@@ -34,27 +34,27 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="relative py-20 sm:py-28 bg-black text-white overflow-hidden border-t border-white/[0.08] selection:bg-[#0052ff] selection:text-white">
+    <section className="relative py-20 sm:py-28 bg-white text-zinc-900 overflow-hidden border-t border-zinc-200 selection:bg-[#0052ff] selection:text-white">
       {/* Accent Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-80 bg-[#0052ff]/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-80 bg-[#0052ff]/5 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-16">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/40 bg-[#0052ff]/10 text-[#6699ff] text-xs sm:text-sm font-semibold tracking-wide shadow-sm shadow-[#0052ff]/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/20 bg-[#0052ff]/10 text-[#0052ff] text-xs sm:text-sm font-semibold tracking-wide shadow-sm">
             <ShieldCheck className="w-4 h-4 text-[#0052ff]" />
             <span>Frictionless Onboarding</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight">
             How It Works in{" "}
-            <span className="bg-gradient-to-r from-[#0052ff] via-[#3377ff] to-[#80aaff] bg-clip-text text-transparent">
+            <span className="text-[#0052ff]">
               3 Simple Steps
             </span>
           </h2>
 
-          <p className="text-base sm:text-lg text-zinc-400 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-zinc-600 leading-relaxed font-normal">
             Transition your after-hours and helpdesk workflows smoothly without disrupting day-to-day client operations.
           </p>
         </div>
@@ -64,15 +64,15 @@ export default function HowItWorks() {
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className="relative rounded-3xl border border-white/[0.08] bg-zinc-950/80 p-8 sm:p-9 flex flex-col justify-between hover:border-[#0052ff]/50 hover:bg-zinc-900/90 transition-all duration-300 group hover:-translate-y-1 backdrop-blur-md shadow-sm"
+              className="relative rounded-3xl border border-zinc-200 bg-white p-8 sm:p-9 flex flex-col justify-between hover:border-[#0052ff]/50 hover:shadow-xl hover:shadow-[#0052ff]/10 transition-all duration-300 group hover:-translate-y-1 shadow-sm"
             >
               <div className="space-y-6">
                 {/* Step Number & Icon Header */}
                 <div className="flex items-center justify-between">
-                  <div className="p-3.5 rounded-2xl bg-[#0052ff]/10 border border-[#0052ff]/20 text-[#0052ff] group-hover:scale-105 group-hover:bg-[white] group-hover:text-white transition-all duration-300">
+                  <div className="p-3.5 rounded-2xl bg-[#0052ff]/10 border border-[#0052ff]/20 text-[#0052ff] group-hover:bg-[#0052ff] group-hover:text-white transition-all duration-300">
                     {step.icon}
                   </div>
-                  <span className="text-3xl font-black text-zinc-800 group-hover:text-[#0052ff]/30 transition-colors tracking-tight font-mono">
+                  <span className="text-3xl font-black text-zinc-200 group-hover:text-[#0052ff]/30 transition-colors tracking-tight font-mono">
                     {step.number}
                   </span>
                 </div>
@@ -82,18 +82,18 @@ export default function HowItWorks() {
                   <span className="text-xs font-semibold uppercase tracking-wider text-[#0052ff]">
                     {step.subtitle}
                   </span>
-                  <h3 className="text-2xl font-bold text-white tracking-tight">
+                  <h3 className="text-2xl font-bold text-zinc-950 tracking-tight">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-zinc-400 pt-2 leading-relaxed">
+                  <p className="text-sm text-zinc-600 pt-2 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
 
                 {/* Bullet Highlights */}
-                <div className="space-y-2 pt-4 border-t border-white/[0.08]">
+                <div className="space-y-2 pt-4 border-t border-zinc-100">
                   {step.highlights.map((item, itemIdx) => (
-                    <div key={itemIdx} className="flex items-center gap-2 text-xs font-medium text-zinc-300">
+                    <div key={itemIdx} className="flex items-center gap-2 text-xs font-medium text-zinc-700">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#0052ff]" />
                       <span>{item}</span>
                     </div>

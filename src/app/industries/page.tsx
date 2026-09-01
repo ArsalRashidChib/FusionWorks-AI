@@ -120,28 +120,28 @@ export default function IndustriesPage() {
   ];
 
   return (
-    <main className="relative min-h-screen bg-black text-white selection:bg-[#0052ff] selection:text-white py-16 sm:py-24 overflow-hidden">
+    <main className="relative min-h-screen bg-white text-zinc-900 selection:bg-[#0052ff] selection:text-white py-16 sm:py-24 overflow-hidden">
       {/* Background Ambient Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-80 bg-[#0052ff]/10 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0052ff]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-80 bg-[#0052ff]/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0052ff]/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-24">
         
         {/* Page Header (SEO-Optimized H1) */}
         <section className="max-w-4xl mx-auto text-center space-y-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/40 bg-[#0052ff]/10 text-[#6699ff] text-xs font-semibold tracking-wide shadow-sm shadow-[#0052ff]/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/20 bg-[#0052ff]/10 text-[#0052ff] text-xs font-semibold tracking-wide shadow-sm">
             <Sparkles className="w-4 h-4 text-[#0052ff]" />
             <span>Vertical Expertise & Compliance</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-950 leading-[1.12]">
             Industries We{" "}
-            <span className="bg-gradient-to-r from-[#0052ff] via-[#3377ff] to-[#80aaff] bg-clip-text text-transparent">
+            <span className="text-[#0052ff]">
               Support & Scale
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-zinc-600 max-w-3xl mx-auto leading-relaxed font-normal">
             Specialized technical workflows and white-label IT support models engineered to meet the stringent compliance, data privacy, and 24/7 uptime benchmarks of modern enterprises.
           </p>
         </section>
@@ -151,31 +151,31 @@ export default function IndustriesPage() {
           {industries.map((ind, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-3xl border border-white/[0.08] bg-zinc-950/80 hover:border-[#0052ff]/50 hover:bg-zinc-900/90 transition-all duration-300 flex flex-col justify-between space-y-6 group shadow-sm hover:-translate-y-1"
+              className="p-8 rounded-3xl border border-zinc-200 bg-white hover:border-[#0052ff]/50 hover:shadow-xl hover:shadow-[#0052ff]/10 transition-all duration-300 flex flex-col justify-between space-y-6 group shadow-sm hover:-translate-y-1"
             >
               <div className="space-y-4">
-                <div className="p-3.5 bg-[#0052ff]/10 border border-[#0052ff]/20 rounded-2xl w-fit group-hover:scale-105 group-hover:bg-[white] text-[#0052ff] group-hover:text-white transition-all duration-300">
+                <div className="p-3.5 bg-[#0052ff]/10 border border-[#0052ff]/20 rounded-2xl w-fit text-[#0052ff]">
                   {ind.icon}
                 </div>
 
                 <div className="space-y-1">
-                  <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  <h2 className="text-xl sm:text-2xl font-bold text-zinc-950 tracking-tight">
                     {ind.name}
                   </h2>
-                  <span className="text-xs font-semibold text-[#6699ff] block">
+                  <span className="text-xs font-semibold text-[#0052ff] block">
                     {ind.tagline}
                   </span>
                 </div>
 
-                <p className="text-zinc-300 text-sm leading-relaxed">
+                <p className="text-zinc-600 text-sm leading-relaxed">
                   {ind.desc}
                 </p>
 
-                <div className="space-y-2 pt-4 border-t border-white/[0.08]">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block">
+                <div className="space-y-2 pt-4 border-t border-zinc-100">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-500 block">
                     Core Vertical Deliverables:
                   </span>
-                  <ul className="space-y-2 text-xs text-zinc-400">
+                  <ul className="space-y-2 text-xs text-zinc-600">
                     {ind.capabilities.map((cap, capIdx) => (
                       <li key={capIdx} className="flex items-start gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#0052ff] flex-shrink-0 mt-0.5" />
@@ -186,10 +186,10 @@ export default function IndustriesPage() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/[0.08]">
+              <div className="pt-4 border-t border-zinc-100">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-zinc-200 group-hover:text-[#6699ff] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-zinc-800 group-hover:text-[#0052ff] transition-colors"
                 >
                   <span>Request industry SLA specifications</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -200,15 +200,15 @@ export default function IndustriesPage() {
         </section>
 
         {/* Security & Compliance Framework */}
-        <section className="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-zinc-950/80 backdrop-blur-xl shadow-lg shadow-black/60 space-y-8">
+        <section className="p-8 sm:p-12 rounded-3xl border border-zinc-200 bg-zinc-50/70 shadow-lg shadow-zinc-200/50 space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0052ff]">
               Data Protection & Privacy
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-950 tracking-tight">
               Enterprise Governance & Security Standards
             </h2>
-            <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+            <p className="text-zinc-600 text-xs sm:text-sm leading-relaxed">
               Every remote troubleshooting session, support ticket, and voice interaction is governed by strict compliance controls.
             </p>
           </div>
@@ -217,13 +217,13 @@ export default function IndustriesPage() {
             {complianceBadges.map((badge, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl border border-white/[0.08] bg-black/80 space-y-3 hover:border-[#0052ff]/40 transition-colors"
+                className="p-6 rounded-2xl border border-zinc-200 bg-white space-y-3 hover:border-[#0052ff]/40 hover:shadow-sm transition-all"
               >
-                <div className="p-2.5 rounded-xl bg-zinc-900 border border-white/[0.08] w-fit">
+                <div className="p-2.5 rounded-xl bg-[#0052ff]/10 border border-[#0052ff]/20 w-fit text-[#0052ff]">
                   {badge.icon}
                 </div>
-                <h3 className="text-base font-bold text-white">{badge.title}</h3>
-                <p className="text-xs text-zinc-400 leading-relaxed">{badge.desc}</p>
+                <h3 className="text-base font-bold text-zinc-950">{badge.title}</h3>
+                <p className="text-xs text-zinc-600 leading-relaxed">{badge.desc}</p>
               </div>
             ))}
           </div>
@@ -231,12 +231,12 @@ export default function IndustriesPage() {
 
         {/* Industry Scoping Callout */}
         <section className="max-w-5xl mx-auto">
-          <div className="rounded-3xl border border-[#0052ff]/40 bg-gradient-to-br from-zinc-950 via-zinc-900 to-black p-10 sm:p-14 text-center space-y-6 shadow-2xl shadow-black/80 backdrop-blur-xl">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+          <div className="rounded-3xl border border-[#0052ff]/20 bg-gradient-to-br from-blue-50/60 via-white to-blue-50/30 p-10 sm:p-14 text-center space-y-6 shadow-xl shadow-[#0052ff]/5">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-zinc-950 tracking-tight">
               Need Tailored Support Coverage for Your Sector?
             </h2>
 
-            <p className="text-zinc-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            <p className="text-zinc-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
               Our engineering and dispatch teams adapt to your customized SLA requirements, security baselines, and industry-specific software toolchains.
             </p>
 

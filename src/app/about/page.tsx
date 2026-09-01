@@ -54,28 +54,28 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="relative min-h-screen bg-black text-white selection:bg-[#0052ff] selection:text-white py-16 sm:py-24 overflow-hidden">
+    <main className="relative min-h-screen bg-white text-zinc-900 selection:bg-[#0052ff] selection:text-white py-16 sm:py-24 overflow-hidden">
       {/* Background Ambient Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-80 bg-[#0052ff]/10 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0052ff]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-80 bg-[#0052ff]/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0052ff]/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-24">
         
         {/* Page Header (SEO-Optimized H1) */}
         <section className="max-w-4xl mx-auto text-center space-y-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/40 bg-[#0052ff]/10 text-[#6699ff] text-xs font-semibold tracking-wide shadow-sm shadow-[#0052ff]/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/20 bg-[#0052ff]/10 text-[#0052ff] text-xs font-semibold tracking-wide shadow-sm">
             <ShieldCheck className="w-4 h-4 text-[#0052ff]" />
             <span>Enterprise White-Label Support</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-950 leading-[1.12]">
             Empowering MSPs With Reliable,{" "}
-            <span className="bg-gradient-to-r from-[#0052ff] via-[#3377ff] to-[#80aaff] bg-clip-text text-transparent">
+            <span className="text-[#0052ff]">
               Scalable 24/7 Support
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-zinc-600 max-w-3xl mx-auto leading-relaxed font-normal">
             FusionWorks AI delivers white-label outsourced helpdesk, NOC monitoring, and after-hours IT coverage engineered exclusively to help Managed Service Providers scale capacity without operational burnout.
           </p>
         </section>
@@ -85,12 +85,12 @@ export default function AboutPage() {
           {operationalStats.map((item, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl border border-white/[0.08] bg-zinc-950/80 backdrop-blur-md text-center space-y-1 shadow-sm"
+              className="p-6 rounded-2xl border border-zinc-200 bg-white text-center space-y-1 shadow-sm"
             >
-              <div className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight font-mono">
+              <div className="text-2xl sm:text-4xl font-extrabold text-[#0052ff] tracking-tight font-mono">
                 {item.metric}
               </div>
-              <div className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">
+              <div className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">
                 {item.label}
               </div>
             </div>
@@ -101,23 +101,23 @@ export default function AboutPage() {
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
           {/* Who We Are Card */}
-          <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl border border-white/[0.08] bg-zinc-950/80 backdrop-blur-md flex flex-col justify-between space-y-8 shadow-sm">
+          <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl border border-zinc-200 bg-white flex flex-col justify-between space-y-8 shadow-sm">
             <div className="space-y-4">
               <div className="p-3 bg-[#0052ff]/10 border border-[#0052ff]/20 text-[#0052ff] rounded-2xl w-fit">
                 <Users className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
                 Who We Are
               </h2>
-              <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
+              <p className="text-zinc-700 text-sm sm:text-base leading-relaxed">
                 FusionWorks AI acts as a transparent, seamless operational extension for Managed Service Providers. We handle frontline ticket queues, after-hours escalations, and automated infrastructure surveillance directly within your PSA/RMM systems.
               </p>
-              <p className="text-zinc-400 text-sm leading-relaxed">
+              <p className="text-zinc-600 text-sm leading-relaxed">
                 By taking on labor-intensive Tier 1 end-user support and overnight NOC alerts, we free your senior engineering teams to focus on high-margin project delivery, vCIO strategy, and strategic account growth.
               </p>
             </div>
 
-            <ul className="space-y-3 pt-6 border-t border-white/[0.08] text-xs sm:text-sm text-zinc-300">
+            <ul className="space-y-3 pt-6 border-t border-zinc-100 text-xs sm:text-sm text-zinc-700">
               <li className="flex items-center gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#0052ff] flex-shrink-0" />
                 <span>Strict non-disclosure agreements with 100% white-label delivery</span>
@@ -134,26 +134,26 @@ export default function AboutPage() {
           </div>
 
           {/* Our Vision Card */}
-          <div className="lg:col-span-5 p-8 sm:p-10 rounded-3xl border border-[#0052ff]/40 bg-gradient-to-br from-zinc-950 via-zinc-900 to-black backdrop-blur-xl flex flex-col justify-between space-y-8 shadow-2xl shadow-black/80">
+          <div className="lg:col-span-5 p-8 sm:p-10 rounded-3xl border border-[#0052ff]/20 bg-gradient-to-br from-blue-50/60 via-white to-blue-50/30 flex flex-col justify-between space-y-8 shadow-xl shadow-[#0052ff]/5">
             <div className="space-y-4">
               <div className="p-3 bg-[#0052ff]/10 border border-[#0052ff]/20 text-[#0052ff] rounded-2xl w-fit">
                 <Target className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
                 Our Vision
               </h2>
-              <p className="text-zinc-200 text-base font-medium leading-relaxed">
+              <p className="text-zinc-800 text-base font-semibold leading-relaxed">
                 To become the most dependable and secure outsourced technical partner for growth-focused MSPs across North America and Europe.
               </p>
-              <p className="text-zinc-400 text-sm leading-relaxed">
+              <p className="text-zinc-600 text-sm leading-relaxed">
                 We believe exceptional client retention requires unwavering availability. Our mission is providing elite support infrastructure that scales effortlessly alongside your endpoint volume.
               </p>
             </div>
 
-            <div className="pt-6 border-t border-white/[0.08]">
+            <div className="pt-6 border-t border-zinc-200">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#6699ff] hover:text-white transition-colors group"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#0052ff] hover:text-[#0045d8] transition-colors group"
               >
                 <span>Partner with our engineering team</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -169,7 +169,7 @@ export default function AboutPage() {
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#0052ff]">
               <Sparkles className="w-3.5 h-3.5" /> Architectural Pillars
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
               Designed for High-Velocity MSP Operations
             </h3>
           </div>
@@ -178,15 +178,15 @@ export default function AboutPage() {
             {highlights.map((item, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-3xl border border-white/[0.08] bg-zinc-950/80 hover:border-[#0052ff]/50 hover:bg-zinc-900/90 transition-all duration-300 space-y-4 group shadow-sm"
+                className="p-8 rounded-3xl border border-zinc-200 bg-white hover:border-[#0052ff]/50 hover:shadow-xl hover:shadow-[#0052ff]/10 transition-all duration-300 space-y-4 shadow-sm"
               >
-                <div className="p-3 rounded-2xl bg-[#0052ff]/10 border border-[#0052ff]/20 w-fit group-hover:scale-105 group-hover:bg-[#0052ff] text-[#0052ff] group-hover:text-white transition-all duration-300">
+                <div className="p-3 rounded-2xl bg-[#0052ff]/10 border border-[#0052ff]/20 w-fit text-[#0052ff]">
                   {item.icon}
                 </div>
-                <h4 className="text-lg font-bold text-white tracking-tight">
+                <h4 className="text-lg font-bold text-zinc-950 tracking-tight">
                   {item.title}
                 </h4>
-                <p className="text-sm text-zinc-400 leading-relaxed">
+                <p className="text-sm text-zinc-600 leading-relaxed">
                   {item.desc}
                 </p>
               </div>

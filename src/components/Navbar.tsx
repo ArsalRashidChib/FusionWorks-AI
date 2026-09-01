@@ -77,37 +77,33 @@ export default function Navbar() {
       desc: "Back-office operations & executive management",
       icon: <UserCheck className="w-4 h-4 text-[#0052ff]" />,
     },
-     {
-      name: "View All Services",
-      href: "/services",
-    }
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full shadow-md bg-white border-b border-zinc-200 text-zinc-900">
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-zinc-200 text-zinc-900 shadow-md">
       {/* 1. Top Utility Info Bar */}
-      <div className="hidden lg:block bg-[#0052ff] text-white text-xs font-medium border-b border-blue-600/30">
+      <div className="hidden lg:block bg-zinc-50 text-zinc-600 text-xs font-medium border-b border-zinc-200">
         <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <a
               href="tel:1234567890"
-              className="flex items-center gap-2 hover:text-zinc-200 transition-colors"
+              className="flex items-center gap-2 hover:text-[#0052ff] transition-colors"
             >
-              <Phone className="w-3.5 h-3.5" />
+              <Phone className="w-3.5 h-3.5 text-[#0052ff]" />
               <span>(123) 456-7890</span>
             </a>
             <a
               href="mailto:info@fusionworksai.com"
-              className="flex items-center gap-2 hover:text-zinc-200 transition-colors"
+              className="flex items-center gap-2 hover:text-[#0052ff] transition-colors"
             >
-              <Mail className="w-3.5 h-3.5" />
+              <Mail className="w-3.5 h-3.5 text-[#0052ff]" />
               <span>info@fusionworksai.com</span>
             </a>
           </div>
 
-          <div className="flex items-center gap-2">
-            <Clock className="w-3.5 h-3.5" />
-            <span>24/7/365 Dedicated MSP Helpdesk & NOC Dispatch</span>
+          <div className="flex items-center gap-2 text-zinc-600">
+            <Clock className="w-3.5 h-3.5 text-[#0052ff]" />
+            <span>24/7 Dedicated Helpdesk & NOC Dispatch</span>
           </div>
         </div>
       </div>
@@ -116,20 +112,26 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
         
         {/* Clean Logo Brand */}
-        <Link href="/" className="flex items-center">
-          <div className="relative h-16 w-64 sm:h-20 sm:w-80 md:h-24 md:w-96">
+        <Link href="/" className="flex items-center gap-3 group focus:outline-none">
+          <div className="relative h-9 w-9 sm:h-10 sm:w-10 flex-shrink-0">
             <Image
-              src="/14.png"
+              src="/Logo-Dark.png"
               alt="FusionWorks AI"
               fill
               priority
-              className="object-contain object-left scale-110"
+              className="object-contain"
             />
+          </div>
+
+          <div className="flex flex-col leading-none">
+            <span className="text-lg sm:text-xl font-black tracking-tight text-zinc-900 ">
+              FUSION<span className="text-[#0052ff]">WORKS</span>
+            </span>
           </div>
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold text-zinc-700">
+        <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold text-zinc-600">
           <Link
             href="/"
             className={`transition-colors hover:text-[#0052ff] ${
@@ -161,14 +163,14 @@ export default function Navbar() {
             </Link>
 
             {/* Dropdown Menu Box */}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[680px] bg-white border border-zinc-200 shadow-2xl rounded-2xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 -translate-y-2 group-hover:translate-y-0 grid grid-cols-2 gap-2">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[700px] bg-white border border-zinc-200 shadow-2xl rounded-2xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 -translate-y-2 group-hover:translate-y-0 grid grid-cols-2 gap-2">
               {serviceDropdown.map((item, idx) => (
                 <Link
                   key={idx}
                   href={item.href}
-                  className="flex items-start gap-3 p-3 rounded-xl hover:bg-zinc-50 group/item transition-colors"
+                  className="flex items-start gap-3 p-3 rounded-xl hover:bg-zinc-50 group/item transition-colors border border-transparent hover:border-[#0052ff]/20"
                 >
-                  <div className="p-2 rounded-lg bg-blue-50 group-hover/item:bg-[white] group-hover/item:text-white transition-colors">
+                  <div className="p-2 rounded-lg bg-blue-50 hover/item:bg-[#0052ff] text-[#0052ff] group-hover/item:text-white transition-colors">
                     {item.icon}
                   </div>
                   <div>
@@ -202,7 +204,14 @@ export default function Navbar() {
           >
             Industries
           </Link>
-
+   <Link
+            href="/blogs"
+            className={`transition-colors hover:text-[#0052ff] ${
+              pathname === "/blogs" ? "text-[#0052ff] font-bold" : ""
+            }`}
+          >
+          Blogs
+          </Link>
           <Link
             href="/contact"
             className={`transition-colors hover:text-[#0052ff] ${
@@ -217,7 +226,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center">
           <Link
             href="/contact"
-            className="px-6 py-3 rounded-md bg-[#0052ff] hover:bg-[#0043d4] text-white text-sm font-bold tracking-wide transition-all shadow-md shadow-blue-500/20 hover:shadow-lg flex items-center gap-2 active:scale-95"
+            className="px-6 py-3 rounded-xl bg-[#0052ff] hover:bg-[#0045d8] text-white text-sm font-bold tracking-wide transition-all shadow-lg shadow-[#0052ff]/20 hover:shadow-[#0052ff]/30 flex items-center gap-2 active:scale-95"
           >
             <span>Request Free Quote</span>
             <ArrowRight className="w-4 h-4" />
@@ -227,10 +236,10 @@ export default function Navbar() {
         {/* Mobile Hamburger Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 rounded-lg border border-zinc-200 text-zinc-800 hover:bg-zinc-100 transition-colors"
+          className="lg:hidden p-2 rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-800 hover:bg-zinc-100 transition-colors"
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isOpen ? <X className="w-6 h-6 text-zinc-900" /> : <Menu className="w-6 h-6 text-zinc-900" />}
         </button>
       </div>
 
@@ -241,7 +250,7 @@ export default function Navbar() {
             <Link
               href="/"
               onClick={() => setIsOpen(false)}
-              className="block py-2 text-base font-semibold text-zinc-800 hover:text-[#0052ff]"
+              className="block py-2 text-base font-semibold text-zinc-600 hover:text-[#0052ff]"
             >
               Home
             </Link>
@@ -249,7 +258,7 @@ export default function Navbar() {
             <Link
               href="/about"
               onClick={() => setIsOpen(false)}
-              className="block py-2 text-base font-semibold text-zinc-800 hover:text-[#0052ff]"
+              className="block py-2 text-base font-semibold text-zinc-600 hover:text-[#0052ff]"
             >
               About Us
             </Link>
@@ -257,7 +266,7 @@ export default function Navbar() {
             <div>
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="w-full flex items-center justify-between py-2 text-base font-semibold text-zinc-800 hover:text-[#0052ff]"
+                className="w-full flex items-center justify-between py-2 text-base font-semibold text-zinc-600 hover:text-[#0052ff]"
               >
                 <span>Services</span>
                 <ChevronDown
@@ -274,7 +283,7 @@ export default function Navbar() {
                       key={i}
                       href={sub.href}
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center gap-2.5 text-xs font-medium text-zinc-700 hover:text-[#0052ff] py-1.5"
+                      className="flex items-center gap-2.5 text-xs font-medium text-zinc-600 hover:text-[#0052ff] py-1.5"
                     >
                       <div className="p-1 rounded bg-blue-50 text-[#0052ff]">
                         {sub.icon}
@@ -282,6 +291,13 @@ export default function Navbar() {
                       <span>{sub.name}</span>
                     </Link>
                   ))}
+                  <Link
+                    href="/services"
+                    onClick={() => setIsOpen(false)}
+                    className="block text-xs font-bold text-[#0052ff] pt-1"
+                  >
+                    View All Services &rarr;
+                  </Link>
                 </div>
               )}
             </div>
@@ -289,7 +305,7 @@ export default function Navbar() {
             <Link
               href="/industries"
               onClick={() => setIsOpen(false)}
-              className="block py-2 text-base font-semibold text-zinc-800 hover:text-[#0052ff]"
+              className="block py-2 text-base font-semibold text-zinc-600 hover:text-[#0052ff]"
             >
               Industries
             </Link>
@@ -297,7 +313,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="block py-2 text-base font-semibold text-zinc-800 hover:text-[#0052ff]"
+              className="block py-2 text-base font-semibold text-zinc-600 hover:text-[#0052ff]"
             >
               Contact
             </Link>
@@ -307,14 +323,14 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center py-3.5 bg-[#0052ff] hover:bg-[#0043d4] text-white rounded-md font-bold text-sm shadow-md"
+              className="block w-full text-center py-3.5 bg-[#0052ff] hover:bg-[#0045d8] text-white rounded-xl font-bold text-sm shadow-md shadow-[#0052ff]/20"
             >
               Request Free Quote
             </Link>
 
             <a
               href="tel:1234567890"
-              className="flex items-center justify-center gap-2 py-3 border border-zinc-300 rounded-md text-zinc-800 font-semibold text-sm hover:bg-zinc-50 transition-colors"
+              className="flex items-center justify-center gap-2 py-3 border border-zinc-200 bg-zinc-50 rounded-xl text-zinc-700 font-semibold text-sm hover:bg-zinc-100 transition-colors"
             >
               <Phone className="w-4 h-4 text-[#0052ff]" />
               <span>(123) 456-7890</span>

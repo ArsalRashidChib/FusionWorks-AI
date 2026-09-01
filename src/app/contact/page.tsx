@@ -64,28 +64,28 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="relative min-h-screen bg-black text-white selection:bg-[#0052ff] selection:text-white py-16 sm:py-24 overflow-hidden">
+    <main className="relative min-h-screen bg-white text-zinc-900 selection:bg-[#0052ff] selection:text-white py-16 sm:py-24 overflow-hidden">
       {/* Background Ambient Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-80 bg-[#0052ff]/10 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#0052ff]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-80 bg-[#0052ff]/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#0052ff]/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-16">
         
         {/* Page Header */}
         <section className="max-w-3xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/40 bg-[#0052ff]/10 text-[#6699ff] text-xs font-semibold tracking-wide shadow-sm shadow-[#0052ff]/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/20 bg-[#0052ff]/10 text-[#0052ff] text-xs font-semibold tracking-wide shadow-sm">
             <Sparkles className="w-4 h-4 text-[#0052ff]" />
             <span>Technical Scoping & Consultations</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-950 leading-tight">
             Let's Build Your Dedicated{" "}
-            <span className="bg-gradient-to-r from-[#0052ff] via-[#3377ff] to-[#80aaff] bg-clip-text text-transparent">
+            <span className="text-[#0052ff]">
               Support Infrastructure
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-zinc-600 max-w-2xl mx-auto leading-relaxed">
             Connect with our technical solution architects to assess endpoint volume, integrate toolsets, and configure custom SLA coverage.
           </p>
         </section>
@@ -96,15 +96,15 @@ export default function ContactPage() {
           {/* Left Column: Direct Contact & Security Info (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             
-            <div className="p-8 rounded-3xl border border-white/[0.08] bg-zinc-950/80 backdrop-blur-md space-y-6 shadow-sm">
+            <div className="p-8 rounded-3xl border border-zinc-200 bg-white space-y-6 shadow-sm">
               <div className="space-y-2">
                 <div className="p-3 bg-[#0052ff]/10 border border-[#0052ff]/20 text-[#0052ff] rounded-2xl w-fit">
                   <Headphones className="w-6 h-6" />
                 </div>
-                <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight pt-2">
+                <h2 className="text-xl sm:text-2xl font-bold text-zinc-950 tracking-tight pt-2">
                   Direct Dispatch & Support
                 </h2>
-                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
                   Have an urgent coverage gap or need immediate technical scoping? Reach our solutions team directly.
                 </p>
               </div>
@@ -114,19 +114,19 @@ export default function ContactPage() {
                   <a
                     key={idx}
                     href={item.href}
-                    className="flex items-start gap-4 p-4 rounded-2xl border border-white/[0.08] bg-black/60 hover:border-[#0052ff]/50 hover:bg-zinc-900/80 transition-all duration-200 group"
+                    className="flex items-start gap-4 p-4 rounded-2xl border border-zinc-200 bg-zinc-50/60 hover:border-[#0052ff]/50 hover:bg-white hover:shadow-md hover:shadow-[#0052ff]/5 transition-all duration-200 group"
                   >
-                    <div className="p-2.5 rounded-xl bg-zinc-900 border border-white/[0.08] group-hover:bg-[white] group-hover:text-white transition-colors duration-200">
+                    <div className="p-2.5 rounded-xl bg-white border border-zinc-200 text-[#0052ff] shadow-sm">
                       {item.icon}
                     </div>
                     <div>
-                      <span className="text-xs text-zinc-400 font-medium block">
+                      <span className="text-xs text-zinc-500 font-medium block">
                         {item.title}
                       </span>
-                      <span className="text-sm font-bold text-white group-hover:text-[#6699ff] transition-colors">
+                      <span className="text-sm font-bold text-zinc-900 group-hover:text-[#0052ff] transition-colors">
                         {item.detail}
                       </span>
-                      <span className="text-[10px] font-semibold text-[#6699ff] block mt-0.5">
+                      <span className="text-[10px] font-semibold text-[#0052ff] block mt-0.5">
                         {item.badge}
                       </span>
                     </div>
@@ -136,13 +136,13 @@ export default function ContactPage() {
             </div>
 
             {/* Security Assurance Badge Card */}
-            <div className="p-6 rounded-3xl border border-white/[0.08] bg-zinc-950/80 backdrop-blur-md space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-zinc-400 block px-1">
+            <div className="p-6 rounded-3xl border border-zinc-200 bg-zinc-50/70 space-y-3">
+              <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 block px-1">
                 Enterprise Assurance
               </span>
               <div className="space-y-2.5">
                 {securityAssurances.map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3 text-xs font-medium text-zinc-300">
+                  <div key={idx} className="flex items-center gap-3 text-xs font-medium text-zinc-700">
                     <div className="p-1 rounded-lg bg-[#0052ff]/10 text-[#0052ff]">
                       {item.icon}
                     </div>
@@ -154,23 +154,23 @@ export default function ContactPage() {
 
           </div>
 
-          {/* Right Column: High-Converting Form Card (7 cols) */}
+          {/* Right Column: Form Card (7 cols) */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl border border-white/[0.08] bg-zinc-950/80 backdrop-blur-xl shadow-2xl shadow-black/80">
+            <div className="p-8 sm:p-10 rounded-3xl border border-zinc-200 bg-white shadow-xl shadow-zinc-200/50">
               {submitted ? (
                 <div className="text-center py-16 space-y-5">
-                  <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 w-fit mx-auto">
+                  <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 w-fit mx-auto">
                     <CheckCircle2 className="w-12 h-12" />
                   </div>
-                  <h3 className="text-2xl font-extrabold text-white tracking-tight">
+                  <h3 className="text-2xl font-extrabold text-zinc-950 tracking-tight">
                     Proposal Request Received
                   </h3>
-                  <p className="text-sm text-zinc-300 max-w-md mx-auto leading-relaxed">
+                  <p className="text-sm text-zinc-600 max-w-md mx-auto leading-relaxed">
                     Our technical solutions architects are reviewing your service parameters and will provide a tailored scope within 24 hours.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="px-6 py-2.5 rounded-xl border border-white/[0.1] bg-zinc-900 hover:bg-zinc-800 text-xs font-semibold text-zinc-300 transition-colors"
+                    className="px-6 py-2.5 rounded-xl border border-zinc-300 bg-zinc-50 hover:bg-zinc-100 text-xs font-semibold text-zinc-700 transition-colors"
                   >
                     Submit Another Inquiry
                   </button>
@@ -178,17 +178,17 @@ export default function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-1 mb-6">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                    <h3 className="text-xl sm:text-2xl font-bold text-zinc-950 tracking-tight">
                       Request a Custom Proposal
                     </h3>
-                    <p className="text-xs text-zinc-400 font-medium">
+                    <p className="text-xs text-zinc-500 font-medium">
                       Fill out the details below to receive a custom SLA coverage plan.
                     </p>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-zinc-400 mb-1.5">
+                      <label className="block text-xs font-semibold text-zinc-700 mb-1.5">
                         Full Name *
                       </label>
                       <input
@@ -197,12 +197,12 @@ export default function ContactPage() {
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/[0.08] text-white text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] transition-all placeholder:text-zinc-600"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-zinc-900 text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] focus:bg-white transition-all placeholder:text-zinc-400"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-zinc-400 mb-1.5">
+                      <label className="block text-xs font-semibold text-zinc-700 mb-1.5">
                         Work Email *
                       </label>
                       <input
@@ -211,14 +211,14 @@ export default function ContactPage() {
                         placeholder="john@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/[0.08] text-white text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] transition-all placeholder:text-zinc-600"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-zinc-900 text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] focus:bg-white transition-all placeholder:text-zinc-400"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-zinc-400 mb-1.5">
+                      <label className="block text-xs font-semibold text-zinc-700 mb-1.5">
                         Phone Number *
                       </label>
                       <input
@@ -227,12 +227,12 @@ export default function ContactPage() {
                         placeholder="(123) 456-7890"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/[0.08] text-white text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] transition-all placeholder:text-zinc-600"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-zinc-900 text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] focus:bg-white transition-all placeholder:text-zinc-400"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-zinc-400 mb-1.5">
+                      <label className="block text-xs font-semibold text-zinc-700 mb-1.5">
                         Company Name
                       </label>
                       <input
@@ -240,20 +240,20 @@ export default function ContactPage() {
                         placeholder="Acme MSP Inc."
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/[0.08] text-white text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] transition-all placeholder:text-zinc-600"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-zinc-900 text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] focus:bg-white transition-all placeholder:text-zinc-400"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-zinc-400 mb-1.5">
+                    <label className="block text-xs font-semibold text-zinc-700 mb-1.5">
                       Service Required *
                     </label>
                     <select
                       required
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/[0.08] text-zinc-200 text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] transition-all truncate"
+                      className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-zinc-800 text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] focus:bg-white transition-all truncate"
                     >
                       <option value="" disabled>Select a Service</option>
                       <option value="helpdesk-support">Helpdesk Support (Tier 1 & Tier 2)</option>
@@ -268,7 +268,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-zinc-400 mb-1.5">
+                    <label className="block text-xs font-semibold text-zinc-700 mb-1.5">
                       Project Details / Requirements *
                     </label>
                     <textarea
@@ -277,13 +277,13 @@ export default function ContactPage() {
                       placeholder="Specify your endpoint volume, current PSA/RMM stack, coverage hours (e.g. 24/7 or after-hours only), and target timeline..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/[0.08] text-white text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] transition-all placeholder:text-zinc-600 resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-zinc-900 text-sm focus:outline-none focus:border-[#0052ff] focus:ring-1 focus:ring-[#0052ff] focus:bg-white transition-all placeholder:text-zinc-400 resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-4 px-6 rounded-xl bg-[#0052ff] hover:bg-[#0045d8] active:scale-[0.98] text-white font-bold text-sm tracking-wide transition-all shadow-lg shadow-[#0052ff]/30 hover:shadow-[#0052ff]/50 flex items-center justify-center gap-2 mt-2"
+                    className="w-full py-4 px-6 rounded-xl bg-[#0052ff] hover:bg-[#0045d8] active:scale-[0.98] text-white font-bold text-sm tracking-wide transition-all shadow-lg shadow-[#0052ff]/25 hover:shadow-[#0052ff]/40 flex items-center justify-center gap-2 mt-2"
                   >
                     <Send className="w-4 h-4" />
                     <span>Submit Request for Proposal</span>

@@ -34,28 +34,28 @@ export default function CoreValues() {
   ];
 
   return (
-    <section className="relative py-20 sm:py-28 bg-black text-white overflow-hidden border-t border-white/[0.08] selection:bg-[#0052ff] selection:text-white">
-      {/* Background Accent Gradients */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#0052ff]/10 rounded-full blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#0052ff]/10 rounded-full blur-[150px] pointer-events-none" />
+    <section className="relative py-20 sm:py-28 bg-white text-zinc-900 overflow-hidden border-t border-zinc-200 selection:bg-[#0052ff] selection:text-white">
+      {/* Subtle Background Lighting & Grid Accent */}
+      <div className="absolute top-0 right-10 w-96 h-96 bg-[#0052ff]/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#0052ff]/5 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-16">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/40 bg-[#0052ff]/10 text-[#6699ff] text-xs sm:text-sm font-semibold tracking-wide shadow-sm shadow-[#0052ff]/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/20 bg-[#0052ff]/10 text-[#0052ff] text-xs sm:text-sm font-semibold tracking-wide shadow-sm">
             <Users2 className="w-4 h-4 text-[#0052ff]" />
-            <span>Why MSPs Choose Fusion Works AI</span>
+            <span>Why MSPs Choose FusionWorks AI</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight">
             Built to Protect Your Brand,{" "}
-            <span className="bg-gradient-to-r from-[#0052ff] via-[#3377ff] to-[#80aaff] bg-clip-text text-transparent">
+            <span className="text-[#0052ff]">
               Elevate Your Margins
             </span>
           </h2>
 
-          <p className="text-base sm:text-lg text-zinc-400 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-zinc-600 leading-relaxed font-normal">
             Scalable outsourced IT support solutions designed specifically to eliminate operational burnout and deliver white-glove support to your clients.
           </p>
         </div>
@@ -65,29 +65,29 @@ export default function CoreValues() {
           {pillars.map((item, idx) => (
             <div
               key={idx}
-              className="relative rounded-3xl border border-white/[0.08] bg-zinc-950/80 p-7 sm:p-8 flex flex-col justify-between hover:border-[#0052ff]/50 hover:bg-zinc-900/90 transition-all duration-300 group hover:-translate-y-1 backdrop-blur-md shadow-sm"
+              className="relative rounded-3xl border border-zinc-200 bg-white p-7 sm:p-8 flex flex-col justify-between hover:border-[#0052ff]/50 hover:shadow-xl hover:shadow-[#0052ff]/10 transition-all duration-300 group hover:-translate-y-1 shadow-sm"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="p-3 rounded-2xl bg-[#0052ff]/10 border border-[#0052ff]/20 text-[#0052ff] group-hover:scale-105 group-hover:bg-[white] group-hover:text-white transition-all duration-300">
+                  <div className="p-3 rounded-2xl bg-[#0052ff]/10 border border-[#0052ff]/20 text-[#0052ff] hover:bg-[#0052ff] group-hover:text-white transition-all duration-300">
                     {item.icon}
                   </div>
-                  <span className="text-[11px] font-semibold text-[#80aaff] bg-[#0052ff]/10 border border-[#0052ff]/30 px-2.5 py-1 rounded-full">
+                  <span className="text-[11px] font-semibold text-[#0052ff] bg-[#0052ff]/10 border border-[#0052ff]/20 px-2.5 py-1 rounded-full">
                     {item.badge}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white tracking-tight pt-2">
+                <h3 className="text-xl font-bold text-zinc-950 tracking-tight pt-2">
                   {item.title}
                 </h3>
 
-                <p className="text-sm text-zinc-400 leading-relaxed">
+                <p className="text-sm text-zinc-600 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
 
               {/* Bottom Metric Pill */}
-              <div className="pt-6 mt-6 border-t border-white/[0.08] flex items-center gap-2 text-xs font-semibold text-zinc-300">
+              <div className="pt-6 mt-6 border-t border-zinc-100 flex items-center gap-2 text-xs font-semibold text-zinc-800">
                 <CheckCircle2 className="w-4 h-4 text-[#0052ff] flex-shrink-0" />
                 <span>{item.stats}</span>
               </div>

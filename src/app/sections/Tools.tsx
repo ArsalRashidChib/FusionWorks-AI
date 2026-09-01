@@ -29,16 +29,16 @@ export default function TrustTools() {
       {tools.map((tool, idx) => (
         <div
           key={`${keyPrefix}-${idx}`}
-          className="flex items-center gap-3.5 px-5 py-3.5 rounded-2xl border border-white/[0.08] bg-zinc-950/80 backdrop-blur-md hover:border-[#0052ff]/50 hover:bg-zinc-900/90 transition-all duration-300 min-w-[210px] select-none shadow-sm group/card"
+          className="flex items-center gap-3.5 px-5 py-3.5 rounded-2xl border border-zinc-200 bg-white hover:border-[#0052ff]/50 hover:shadow-lg hover:shadow-[#0052ff]/10 transition-all duration-300 min-w-[210px] select-none shadow-sm group/card"
         >
-          <div className="p-2 rounded-xl bg-[#0052ff]/10 text-[#0052ff] border border-[#0052ff]/20 group-hover/card:bg-[#0052ff] group-hover/card:text-white transition-colors duration-300">
+          <div className="p-2 rounded-xl bg-[#0052ff]/10 text-[#0052ff] border border-[#0052ff]/20">
             {tool.icon}
           </div>
           <div className="text-left">
-            <span className="block text-sm font-bold text-white tracking-tight">
+            <span className="block text-sm font-bold text-zinc-950 tracking-tight">
               {tool.name}
             </span>
-            <span className="block text-[11px] font-medium text-zinc-400">
+            <span className="block text-[11px] font-medium text-zinc-500">
               {tool.category}
             </span>
           </div>
@@ -48,12 +48,12 @@ export default function TrustTools() {
   );
 
   return (
-    <section className="relative w-full border-y border-white/[0.08] bg-black py-12 overflow-hidden selection:bg-[#0052ff] selection:text-white">
-      {/* Glow Backdrop */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-24 bg-[#0052ff]/10 blur-3xl pointer-events-none" />
+    <section className="relative w-full border-y border-zinc-200 bg-white py-12 overflow-hidden selection:bg-[#0052ff] selection:text-white">
+      {/* Subtle Glow Backdrop */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-24 bg-[#0052ff]/5 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 mb-8 text-center relative z-10">
-        <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-zinc-400">
+        <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-zinc-500">
           Seamlessly Compatible With Your Entire MSP & RMM Stack
         </p>
       </div>

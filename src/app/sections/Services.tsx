@@ -75,27 +75,27 @@ export default function Services() {
   ];
 
   return (
-    <section className="relative py-20 sm:py-28 bg-black text-white overflow-hidden border-t border-white/[0.08] selection:bg-[#0052ff] selection:text-white">
-      {/* Background Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-5xl h-72 bg-[#0052ff]/10 rounded-full blur-[140px] pointer-events-none" />
+    <section className="relative py-20 sm:py-28 bg-white text-zinc-900 overflow-hidden border-t border-zinc-200 selection:bg-[#0052ff] selection:text-white">
+      {/* Background Radial Glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-5xl h-72 bg-[#0052ff]/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-16">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/40 bg-[#0052ff]/10 text-[#6699ff] text-xs sm:text-sm font-semibold tracking-wide shadow-sm shadow-[#0052ff]/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/20 bg-[#0052ff]/10 text-[#0052ff] text-xs sm:text-sm font-semibold tracking-wide shadow-sm">
             <Sparkles className="w-4 h-4 text-[#0052ff]" />
             <span>Tailored MSP Services</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight">
             Comprehensive Support Layers,{" "}
-            <span className="bg-gradient-to-r from-[#0052ff] via-[#3377ff] to-[#80aaff] bg-clip-text text-transparent">
+            <span className="text-[#0052ff]">
               Built for Scale
             </span>
           </h2>
 
-          <p className="text-base sm:text-lg text-zinc-400 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-zinc-600 leading-relaxed font-normal">
             Plug certified engineers directly into your workflow to streamline tickets and maintain round-the-clock uptime.
           </p>
         </div>
@@ -105,17 +105,17 @@ export default function Services() {
           {services.map((svc) => (
             <div
               key={svc.id}
-              className="relative group rounded-3xl border border-white/[0.08] bg-zinc-950/80 p-8 sm:p-10 backdrop-blur-xl flex flex-col justify-between hover:border-[#0052ff]/50 hover:bg-zinc-900/90 transition-all duration-300 hover:-translate-y-1 shadow-sm"
+              className="relative group rounded-3xl border border-zinc-200 bg-white p-8 sm:p-10 flex flex-col justify-between hover:border-[#0052ff]/50 hover:shadow-xl hover:shadow-[#0052ff]/10 transition-all duration-300 hover:-translate-y-1 shadow-sm"
             >
               <div className="space-y-6">
                 
-                {/* Header with Icon and SLA Tag */}
+                {/* Header with Static Icon and SLA Tag */}
                 <div className="flex items-center justify-between">
-                  <div className="p-3.5 rounded-2xl bg-[#0052ff]/10 border border-[#0052ff]/20 text-[#0052ff] group-hover:scale-105 group-hover:bg-[white] group-hover:text-white transition-all duration-300">
+                  <div className="p-3.5 rounded-2xl bg-[#0052ff]/10 border border-[#0052ff]/20 text-[#0052ff]">
                     {svc.icon}
                   </div>
                   <div className="text-right">
-                    <div className="text-lg sm:text-xl font-bold text-[#6699ff]">
+                    <div className="text-lg sm:text-xl font-bold text-[#0052ff]">
                       {svc.metric}
                     </div>
                     <div className="text-[10px] uppercase tracking-wider font-semibold text-zinc-400">
@@ -129,10 +129,10 @@ export default function Services() {
                   <span className="text-xs font-semibold uppercase tracking-wider text-[#0052ff]">
                     {svc.subtitle}
                   </span>
-                  <h3 className="text-2xl font-bold text-white tracking-tight">
+                  <h3 className="text-2xl font-bold text-zinc-950 tracking-tight">
                     {svc.title}
                   </h3>
-                  <p className="text-sm text-zinc-300 pt-1 leading-relaxed">
+                  <p className="text-sm text-zinc-600 pt-1 leading-relaxed">
                     {svc.tagline}
                   </p>
                 </div>
@@ -140,7 +140,7 @@ export default function Services() {
                 {/* Scope Points */}
                 <div className="space-y-2.5 pt-2">
                   {svc.deliverables.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-400">
+                    <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-600">
                       <CheckCircle2 className="w-4 h-4 text-[#0052ff] flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </div>
@@ -150,12 +150,13 @@ export default function Services() {
               </div>
 
               {/* Card Footer Link */}
-              <div className="pt-8 mt-6 border-t border-white/[0.08]">
+              <div className="pt-8 mt-6 border-t border-zinc-100">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-zinc-300 group-hover:text-[#0052ff] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-zinc-600 group-hover:text-[#0052ff] transition-colors"
                 >
-                  Configure service scope <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <span>Configure service scope</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
 
@@ -167,10 +168,10 @@ export default function Services() {
         <div className="flex justify-center pt-4">
           <Link
             href="/services"
-            className="group px-8 py-4 rounded-2xl bg-zinc-950 border border-white/[0.1] hover:border-[#0052ff]/60 hover:bg-zinc-900 text-white font-semibold text-sm sm:text-base flex items-center gap-3 transition-all duration-300 shadow-lg shadow-black/60 hover:shadow-[#0052ff]/20 hover:-translate-y-0.5 active:translate-y-0"
+            className="group px-8 py-4 rounded-2xl bg-white border border-zinc-200 hover:border-[#0052ff]/60 hover:bg-zinc-50 text-zinc-900 font-semibold text-sm sm:text-base flex items-center gap-3 transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-[#0052ff]/10 hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>Explore All Services</span>
-            <div className="p-1 rounded-lg bg-[#0052ff]/20 text-[#0052ff] border border-[#0052ff]/30 group-hover:bg-[#0052ff] group-hover:text-white transition-all">
+            <div className="p-1 rounded-lg bg-[#0052ff]/10 text-[#0052ff] border border-[#0052ff]/20">
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </div>
           </Link>
