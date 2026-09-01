@@ -1,128 +1,238 @@
+// src/app/services/page.tsx
 import Link from "next/link";
 import {
   Headphones,
   Activity,
   MonitorCheck,
   TicketCheck,
+  PhoneCall,
+  TrendingUp,
+  CalendarCheck,
+  UserCheck,
   CheckCircle2,
   ArrowRight,
-  ShieldAlert,
+  ShieldCheck,
+  Sparkles,
 } from "lucide-react";
+
+export const metadata = {
+  title: "Outsourced MSP & Enterprise IT Support Services | FusionWorks AI",
+  description:
+    "Explore our complete catalog of white-label helpdesk, 24/7 NOC monitoring, inbound/outbound support, B2B lead generation, appointment setting, and virtual administrative support.",
+};
 
 export default function ServicesPage() {
   const serviceList = [
     {
-      icon: <Headphones className="w-6 h-6 text-indigo-400" />,
-      title: "Helpdesk Support",
-      summary: "Tier 1 and Tier 2 helpdesk support for MSP clients and end users.",
+      slug: "helpdesk-support",
+      icon: <Headphones className="w-6 h-6 text-[#0052ff]" />,
+      title: "Helpdesk Support (Tier 1 & 2)",
+      category: "Frontline IT Operations",
+      summary: "White-label Tier 1 and Tier 2 remote desktop and application support operating directly inside your PSA.",
       details: [
-        "End-user onboarding and account provisioning",
-        "Hardware and software issue remediation",
-        "Multi-channel support (Chat, Email, Voice)",
-        "Strict adherence to your branded response times",
+        "End-user onboarding, offboarding & account provisioning",
+        "Hardware, software & M365 suite troubleshooting",
+        "Omnichannel triage across email, chat, and live phone lines",
+        "Strict adherence to custom response and resolution SLAs",
       ],
     },
     {
-      icon: <Activity className="w-6 h-6 text-indigo-400" />,
-      title: "After-Hours Monitoring",
-      summary: "24/7 monitoring and rapid incident response to minimize downtime.",
+      slug: "after-hours-monitoring",
+      icon: <Activity className="w-6 h-6 text-[#0052ff]" />,
+      title: "After-Hours & NOC Monitoring",
+      category: "24/7 Surveillance",
+      summary: "Round-the-clock infrastructure telemetry, alert triage, and emergency dispatch while your internal engineers rest.",
       details: [
-        "Continuous infrastructure and network surveillance",
-        "Proactive alert filtering and automated triaging",
-        "Overnight and weekend rapid response coverage",
-        "Critical downtime mitigation and logging",
+        "Continuous server, network, and firewall health tracking",
+        "Intelligent alert suppression and noise reduction",
+        "Overnight and weekend rapid emergency escalations",
+        "Automated backup checks and server failover drills",
       ],
     },
     {
-      icon: <MonitorCheck className="w-6 h-6 text-indigo-400" />,
+      slug: "remote-troubleshooting",
+      icon: <MonitorCheck className="w-6 h-6 text-[#0052ff]" />,
       title: "Remote Troubleshooting",
-      summary: "Secure remote support for desktops, servers, and cloud environments.",
+      category: "Tier 2 & 3 Remediation",
+      summary: "Audited remote desktop sessions resolving complex cloud, network, and identity management issues.",
       details: [
-        "Secure remote session execution and diagnostics",
-        "Virtual machine and cloud service remediation",
-        "Server patch management and stability checks",
-        "Firewall and network access maintenance",
+        "Active Directory & Azure Entra ID credential fixes",
+        "VPN tunnel configuration and routing diagnostics",
+        "Endpoint containment and security remediation",
+        "Root cause logging for recurring ticket queues",
       ],
     },
     {
-      icon: <TicketCheck className="w-6 h-6 text-indigo-400" />,
-      title: "Ticket Management",
-      summary: "Efficient ticket handling and escalation management integrated into MSP workflows.",
+      slug: "ticket-management",
+      icon: <TicketCheck className="w-6 h-6 text-[#0052ff]" />,
+      title: "Ticket Management & Dispatch",
+      category: "Workflow Automation",
+      summary: "Seamless ticket prioritization, escalation handling, and SLA enforcement directly via your PSA/RMM tools.",
       details: [
-        "Direct PSA/RMM tool integration (ConnectWise, Autotask, HaloPSA)",
-        "Structured Tier 1 to Tier 3 escalation pathways",
-        "Detailed documentation and ticket lifecycle updates",
-        "Customizable SLA tracking and metrics reporting",
+        "Deep ConnectWise, Datto, Autotask, and HaloPSA integration",
+        "Structured multi-tier escalation pathways",
+        "Real-time shift handoffs and audit-ready logging",
+        "End-of-month SLA metrics and resolution reporting",
+      ],
+    },
+    {
+      slug: "customer-support",
+      icon: <PhoneCall className="w-6 h-6 text-[#0052ff]" />,
+      title: "Inbound & Outbound Customer Support",
+      category: "Omnichannel BPO",
+      summary: "Dedicated bilingual support teams delivering high-touch customer service across voice, live chat, and ticketing.",
+      details: [
+        "24/7 omnichannel customer assistance and inquiries",
+        "Customer issue logging and escalation management",
+        "Quality assurance monitoring with 100% call recording",
+        "Customized corporate script and brand alignment",
+      ],
+    },
+    {
+      slug: "lead-generation",
+      icon: <TrendingUp className="w-6 h-6 text-[#0052ff]" />,
+      title: "Inbound & Outbound Lead Generation",
+      category: "Growth & Retention",
+      summary: "Targeted retail acquisition campaigns combined with high-touch client retention and account expansion pipelines.",
+      details: [
+        "B2B cold outbound calling and warm inbound qualification",
+        "Retail pipeline expansion and churn reduction campaigns",
+        "Retention portfolio outreach and account renewal tracking",
+        "CRM data cleansing and enriched lead scoring",
+      ],
+    },
+    {
+      slug: "appointment-setting",
+      icon: <CalendarCheck className="w-6 h-6 text-[#0052ff]" />,
+      title: "Appointment Setting",
+      category: "Sales Pipeline Acceleration",
+      summary: "High-conversion meeting scheduling pairing qualified decision-makers directly with your executive sales reps.",
+      details: [
+        "Direct calendar booking into Google Calendar & Outlook",
+        "Strict ICP vetting and decision-maker validation",
+        "Pre-meeting briefing documentation and stakeholder notes",
+        "Automated meeting reminders reducing no-show rates",
+      ],
+    },
+    {
+      slug: "virtual-assistant",
+      icon: <UserCheck className="w-6 h-6 text-[#0052ff]" />,
+      title: "Virtual & Administrative Assistant",
+      category: "Executive Operations",
+      summary: "Specialized virtual assistants handling back-office admin tasks, calendar management, and operational workflows.",
+      details: [
+        "Executive calendar, travel, and inbox management",
+        "Data entry, invoice processing, and billing reconciliation",
+        "CRM and ERP database hygiene and hygiene audits",
+        "Custom administrative reporting and meeting minutes",
       ],
     },
   ];
 
   return (
-    <div className="space-y-24 py-16">
-      {/* Page Header */}
-      <section className="max-w-4xl mx-auto px-6 text-center space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-semibold tracking-wide">
-          <ShieldAlert className="w-4 h-4" /> End-to-End MSP Delivery
-        </div>
-        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-          Comprehensive Outsourced{" "}
-          <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-sky-400 bg-clip-text text-transparent">
-            IT Services
-          </span>
-        </h1>
-        <p className="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-          High-performance support tiers engineered to seamlessly plug into your existing toolchain and maintain client trust 24/7.
-        </p>
-      </section>
+    <main className="relative min-h-screen bg-black text-white selection:bg-[#0052ff] selection:text-white py-16 sm:py-24 overflow-hidden">
+      {/* Background Ambient Glows */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-80 bg-[#0052ff]/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0052ff]/10 rounded-full blur-[140px] pointer-events-none" />
 
-      {/* Services Grid */}
-      <section className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {serviceList.map((svc, idx) => (
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-20">
+        
+        {/* Page Header */}
+        <section className="max-w-4xl mx-auto text-center space-y-5">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/40 bg-[#0052ff]/10 text-[#6699ff] text-xs font-semibold tracking-wide shadow-sm shadow-[#0052ff]/20">
+            <ShieldCheck className="w-4 h-4 text-[#0052ff]" />
+            <span>End-to-End MSP & Business Support</span>
+          </div>
+
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+            Comprehensive Outsourced{" "}
+            <span className="bg-gradient-to-r from-[#0052ff] via-[#3377ff] to-[#80aaff] bg-clip-text text-transparent">
+              IT & Growth Services
+            </span>
+          </h1>
+
+          <p className="text-base sm:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed font-normal">
+            Scalable, white-label technical support tiers and business development pipelines engineered to plug directly into your existing infrastructure.
+          </p>
+        </section>
+
+        {/* Services Grid (8 Services) */}
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-stretch">
+          {serviceList.map((svc) => (
             <div
-              key={idx}
-              className="p-8 sm:p-10 rounded-3xl border border-zinc-800 bg-zinc-900/40 hover:border-zinc-700/80 transition-all flex flex-col justify-between space-y-6"
+              key={svc.slug}
+              className="p-8 sm:p-10 rounded-3xl border border-white/[0.08] bg-zinc-950/80 hover:border-[#0052ff]/50 hover:bg-zinc-900/90 transition-all duration-300 flex flex-col justify-between space-y-6 group shadow-sm hover:-translate-y-1"
             >
               <div className="space-y-4">
-                <div className="p-3 bg-indigo-500/10 border border-indigo-500/20 rounded-xl w-fit">
-                  {svc.icon}
+                <div className="flex items-center justify-between">
+                  <div className="p-3.5 bg-[#0052ff]/10 border border-[#0052ff]/20 rounded-2xl w-fit group-hover:bg-[white] text-[#0052ff] group-hover:text-white transition-all duration-300">
+                    {svc.icon}
+                  </div>
+                  <span className="text-[11px] font-semibold text-[#80aaff] bg-[#0052ff]/10 border border-[#0052ff]/30 px-3 py-1 rounded-full uppercase tracking-wider">
+                    {svc.category}
+                  </span>
                 </div>
-                <h2 className="text-2xl font-bold text-white tracking-tight">{svc.title}</h2>
-                <p className="text-zinc-300 text-sm leading-relaxed">{svc.summary}</p>
 
-                <ul className="space-y-2.5 pt-4 border-t border-zinc-800/80 text-sm text-zinc-400">
+                <h2 className="text-2xl font-bold text-white tracking-tight pt-2">
+                  {svc.title}
+                </h2>
+                
+                <p className="text-zinc-300 text-sm leading-relaxed">
+                  {svc.summary}
+                </p>
+
+                <ul className="space-y-2.5 pt-4 border-t border-white/[0.08] text-xs sm:text-sm text-zinc-400">
                   {svc.details.map((item, itemIdx) => (
-                    <li key={itemIdx} className="flex items-center gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-indigo-400 flex-shrink-0" />
+                    <li key={itemIdx} className="flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-[#0052ff] flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
+
+              {/* Card Footer Link */}
+              <div className="pt-6 border-t border-white/[0.08]">
+                <Link
+                  href={`/services/${svc.slug}`}
+                  className="inline-flex items-center gap-2 text-sm font-bold text-zinc-200 group-hover:text-[#6699ff] transition-colors"
+                >
+                  <span>Explore service specifications</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
           ))}
-        </div>
-      </section>
+        </section>
 
-      {/* Call to Action */}
-      <section className="max-w-5xl mx-auto px-6">
-        <div className="rounded-3xl border border-zinc-800 bg-zinc-900/30 p-10 text-center space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
-            Ready to integrate custom Tier 1 & Tier 2 workflows?
-          </h2>
-          <p className="text-zinc-400 text-sm max-w-xl mx-auto">
-            Schedule a scoping call to connect your PSA/RMM systems and configure your dedicated support coverage.
-          </p>
-          <div className="flex justify-center">
-            <Link
-              href="/contact"
-              className="px-7 py-3 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium flex items-center gap-2 transition-all shadow-lg shadow-indigo-600/25"
-            >
-              Request Service Consultation <ArrowRight className="w-4 h-4" />
-            </Link>
+        {/* Scoping CTA Card */}
+        <section className="max-w-5xl mx-auto">
+          <div className="rounded-3xl border border-[#0052ff]/40 bg-gradient-to-br from-zinc-950 via-zinc-900 to-black p-10 sm:p-12 text-center space-y-6 shadow-2xl shadow-black/80 backdrop-blur-xl">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#0052ff]">
+              <Sparkles className="w-4 h-4" /> Ready to Scale
+            </div>
+            
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+              Need a Custom Multi-Tier SLA or Hybrid Team?
+            </h2>
+
+            <p className="text-zinc-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+              Schedule a technical scoping session to connect your toolchain, define escalation matrices, and launch within 5–7 business days.
+            </p>
+
+            <div className="flex justify-center pt-2">
+              <Link
+                href="/contact"
+                className="px-8 py-4 rounded-xl bg-[#0052ff] hover:bg-[#0045d8] text-white font-bold text-sm sm:text-base flex items-center gap-2.5 transition-all shadow-lg shadow-[#0052ff]/25 active:scale-95"
+              >
+                <span>Request Custom Scoping Call</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+      </div>
+    </main>
   );
 }

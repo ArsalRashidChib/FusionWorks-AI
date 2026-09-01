@@ -1,52 +1,176 @@
+// src/components/Footer.tsx
 import Link from "next/link";
-import { Bot } from "lucide-react";
+import Image from "next/image";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ArrowRight,
+  ShieldCheck,
+  Headphones,
+  Activity,
+  Layers,
+} from "lucide-react";
 
 export default function Footer() {
+  const quickLinks = [
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "All Services", href: "/services" },
+    { name: "Target Industries", href: "/industries" },
+    { name: "Contact & Scoping", href: "/contact" },
+  ];
+
+  const mspServices = [
+    { name: "24/7/365 Helpdesk Support", href: "/services" },
+    { name: "NOC Monitoring & Triage", href: "/services" },
+    { name: "After-Hours IT Coverage", href: "/services" },
+    { name: "Tier 2 & 3 Escalations", href: "/services" },
+    { name: "White-Label PSA/RMM Delivery", href: "/services" },
+  ];
+
   return (
-    <footer className="border-t border-zinc-800 bg-zinc-950 text-zinc-400 py-12">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="space-y-4">
-          <div className="flex items-center gap-2 text-lg font-bold text-white">
-            <div className="p-1 rounded bg-indigo-600 text-white">
-              <Bot className="w-4 h-4" />
+    <footer className="relative border-t border-white/[0.08] bg-black text-zinc-400 overflow-hidden selection:bg-[#0052ff] selection:text-white">
+      {/* Background Radial Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-32 bg-[#0052ff]/10 blur-[130px] pointer-events-none" />
+
+      {/* Main Footer Content */}
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-16 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
+          
+          {/* Column 1: Brand & Overview (5 cols on lg) */}
+          <div className="lg:col-span-5 space-y-6">
+            <Link href="/" className="inline-block">
+              <div className="relative h-14 w-60 sm:h-16 sm:w-72">
+                <Image
+                  src="/12.png"
+                  alt="FusionWorks AI"
+                  fill
+                  priority
+                  className="object-contain object-left"
+                />
+              </div>
+            </Link>
+
+            <p className="text-sm text-zinc-400 leading-relaxed max-w-md">
+              Enterprise-grade outsourced helpdesk, 24/7/365 NOC surveillance, and after-hours IT operations engineered exclusively for scaling Managed Service Providers.
+            </p>
+
+            <div className="space-y-2.5 pt-2 text-xs sm:text-sm text-zinc-300">
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-lg bg-zinc-950 border border-white/[0.08] text-[#0052ff]">
+                  <Clock className="w-4 h-4" />
+                </div>
+                <span>24/7/365 Active Engineering Standby</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-lg bg-zinc-950 border border-white/[0.08] text-[#0052ff]">
+                  <ShieldCheck className="w-4 h-4" />
+                </div>
+                <span>100% White-Labeled & NDA Protected</span>
+              </div>
             </div>
-            FusionWorksAI
           </div>
-          <p className="text-sm text-zinc-500">
-            Intelligent enterprise AI transformation, automation pipelines, and modern web architectures.
-          </p>
+
+          {/* Column 2: Quick Navigation (2 cols on lg) */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-white text-sm font-bold uppercase tracking-wider">
+              Navigation
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              {quickLinks.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="hover:text-white hover:text-[#0052ff] transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span className="text-zinc-600 group-hover:text-[#0052ff] transition-colors">›</span>
+                    <span>{item.name}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: MSP Solutions (2 cols on lg) */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-white text-sm font-bold uppercase tracking-wider">
+              MSP Solutions
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              {mspServices.map((svc) => (
+                <li key={svc.name}>
+                  <Link
+                    href={svc.href}
+                    className="hover:text-white hover:text-[#0052ff] transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span className="text-zinc-600 group-hover:text-[#0052ff] transition-colors">›</span>
+                    <span>{svc.name}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Contact & Action (3 cols on lg) */}
+          <div className="lg:col-span-3 space-y-4">
+            <h4 className="text-white text-sm font-bold uppercase tracking-wider">
+              Direct Contact
+            </h4>
+            
+            <div className="space-y-3 text-sm">
+              <a
+                href="tel:1234567890"
+                className="flex items-center gap-3 p-3 rounded-xl border border-white/[0.08] bg-zinc-950/80 text-zinc-300 hover:text-white hover:border-[#0052ff]/50 transition-all"
+              >
+                <Phone className="w-4 h-4 text-[#0052ff] flex-shrink-0" />
+                <span className="font-semibold text-xs sm:text-sm">(123) 456-7890</span>
+              </a>
+
+              <a
+                href="mailto:info@fusionworksai.com"
+                className="flex items-center gap-3 p-3 rounded-xl border border-white/[0.08] bg-zinc-950/80 text-zinc-300 hover:text-white hover:border-[#0052ff]/50 transition-all"
+              >
+                <Mail className="w-4 h-4 text-[#0052ff] flex-shrink-0" />
+                <span className="font-semibold text-xs sm:text-sm">info@fusionworksai.com</span>
+              </a>
+            </div>
+
+            <div className="pt-2">
+              <Link
+                href="/contact"
+                className="w-full py-3 px-4 rounded-xl bg-[#0052ff] hover:bg-[#0045d8] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-[#0052ff]/20 active:scale-95 transition-all"
+              >
+                <span>Request SLA Proposal</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+
         </div>
 
-        <div>
-          <h4 className="text-white text-sm font-semibold mb-3">Pages</h4>
-          <ul className="space-y-2 text-sm">
-            <li><Link href="/" className="hover:text-white">Home</Link></li>
-            <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-            <li><Link href="/services" className="hover:text-white">Services</Link></li>
-            <li><Link href="/industries" className="hover:text-white">Industries</Link></li>
-          </ul>
-        </div>
+        {/* Bottom Bar: Copyright & Compliance */}
+        <div className="mt-12 pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+          <div>
+            © {new Date().getFullYear()} FusionWorks AI. All rights reserved.
+          </div>
 
-        <div>
-          <h4 className="text-white text-sm font-semibold mb-3">Solutions</h4>
-          <ul className="space-y-2 text-sm">
-            <li>Predictive Analytics</li>
-            <li>Generative Workflows</li>
-            <li>Enterprise Automation</li>
-            <li>Cloud Data Lakes</li>
-          </ul>
+          <div className="flex items-center gap-6 text-zinc-400">
+            <Link href="/privacy-policy" className="hover:text-[#0052ff] transition-colors">
+              Privacy Policy
+            </Link>
+            <span>•</span>
+            <Link href="/contact" className="hover:text-[#0052ff] transition-colors">
+              Terms of Service
+            </Link>
+            <span>•</span>
+            <Link href="/contact" className="hover:text-[#0052ff] transition-colors">
+              Service Level Agreement
+            </Link>
+          </div>
         </div>
-
-        <div>
-          <h4 className="text-white text-sm font-semibold mb-3">Connect</h4>
-          <p className="text-sm text-zinc-500 mb-2">info@fusionworks.ai</p>
-          <Link href="/contact" className="text-sm text-indigo-400 hover:underline">
-            Request an audit &rarr;
-          </Link>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-6 mt-8 pt-6 border-t border-zinc-900 text-xs text-zinc-600 text-center">
-        © {new Date().getFullYear()} FusionWorksAI. All rights reserved.
       </div>
     </footer>
   );
