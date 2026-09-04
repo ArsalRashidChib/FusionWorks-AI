@@ -39,14 +39,14 @@ export default function Hero() {
       {/* 1. Background Image */}
      {/* 1. Background Image with Blur */}
 <div
-  className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-[5px]  "
+  className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-[3px]  "
   style={{
-    backgroundImage: `url('https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FsaWZvcm5pYXxlbnwwfHwwfHx8MA%3D%3D')`,
+    backgroundImage: `url('https://media.istockphoto.com/id/1571494714/photo/view-of-golden-gate-bridge.jpg?s=612x612&w=0&k=20&c=VYSXTGOPzkNrXOY_UfNJMksDB8_iMLgF0m7FUuKdqnU=')`,
   }}
 />
 
       {/* 2. Gradient Overlay (Transparent top fading into Black at bottom) */}
-<div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#ffffff]/30 via-white/30 to-[#ffffff]/30" />
+<div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#000000]/30 via-[#000000]/30 to-[#000000]/50" />
       {/* Main Content Grid */}
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-28 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center">
@@ -58,16 +58,14 @@ export default function Hero() {
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-white leading-[1.12] drop-shadow-md">
-              24/7 White-Label Helpdesk{" "}
-              <span className="text-[#0052ff]">
-                Built for Scaling MSPs
-              </span>
+              24/7 Coverage{" "}
+              <span className="text-[#ffffff]">
+Customer Support and Outsourcing              </span>
             </h1>
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal drop-shadow-sm">
-              FusionWorks AI delivers reliable after-hours IT support, remote helpdesk services, NOC monitoring, and ticket management solutions purpose-built for Managed Service Providers.
-            </p>
+Where Human Heart Meets AI EfficiencyAt Fusion AI Works, we don't just resolve tickets—we design seamless experiences. We are a next-generation contact center bridging the gap between innovative technology and real human empathy. By automating the routine and personalizing the complex, we give your business 24/7/365 coverage while drastically reducing operational costs.            </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-1">

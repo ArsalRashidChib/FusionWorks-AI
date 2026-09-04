@@ -69,7 +69,7 @@ export default function HowItWorks() {
               <div className="space-y-6">
                 {/* Step Number & Icon Header */}
                 <div className="flex items-center justify-between">
-                  <div className="p-3.5 rounded-2xl bg-[#0052ff]/10 border border-[#0052ff]/20 text-[#0052ff] group-hover:bg-[#0052ff] group-hover:text-white transition-all duration-300">
+                  <div className="p-3.5 rounded-2xl bg-[#0052ff]/10 border border-[#0052ff]/20 text-[#0052ff] hover:bg-[#0052ff] group-hover:text-white transition-all duration-300">
                     {step.icon}
                   </div>
                   <span className="text-3xl font-black text-zinc-200 group-hover:text-[#0052ff]/30 transition-colors tracking-tight font-mono">

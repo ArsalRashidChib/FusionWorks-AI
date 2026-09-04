@@ -152,8 +152,7 @@ export default function ServicesPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-zinc-600 max-w-3xl mx-auto leading-relaxed font-normal">
-            Scalable, white-label technical support tiers and business development pipelines engineered to plug directly into your existing infrastructure.
-          </p>
+Tailored Solutions to Fuel Your GrowthWe engineer custom business process outsourcing (BPO) solutions that combine automated speed with human intelligence. Whatever your business needs to scale, we have a specialized team ready to deliver.          </p>
         </section>
 
         {/* Services Grid (8 Services) */}
