@@ -41,7 +41,7 @@ export default function Hero() {
 <div
   className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-[3px]  "
   style={{
-    backgroundImage: `url('https://media.istockphoto.com/id/1571494714/photo/view-of-golden-gate-bridge.jpg?s=612x612&w=0&k=20&c=VYSXTGOPzkNrXOY_UfNJMksDB8_iMLgF0m7FUuKdqnU=')`,
+    backgroundImage: `url('https://img.magnific.com/free-photo/santa-monica-pier-beach-los-angeles_649448-4112.jpg?semt=ais_hybrid&w=740&q=80')`,
   }}
 />
 
