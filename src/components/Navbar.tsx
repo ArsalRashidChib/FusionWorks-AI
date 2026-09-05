@@ -10,8 +10,6 @@ import {
   X,
   ChevronDown,
   Phone,
-  Mail,
-  Clock,
   ArrowRight,
   Headphones,
   Activity,
@@ -81,34 +79,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-zinc-200 text-zinc-900 shadow-md">
-      {/* 1. Top Utility Info Bar */}
-      <div className="hidden lg:block bg-zinc-50 text-zinc-600 text-xs font-medium border-b border-zinc-200">
-        <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <a
-              href="tel:1234567890"
-              className="flex items-center gap-2 hover:text-[#0052ff] transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#0052ff]" />
-              <span>(123) 456-7890</span>
-            </a>
-            <a
-              href="mailto:info@fusionworksai.com"
-              className="flex items-center gap-2 hover:text-[#0052ff] transition-colors"
-            >
-              <Mail className="w-3.5 h-3.5 text-[#0052ff]" />
-              <span>info@fusionworksai.com</span>
-            </a>
-          </div>
-
-          <div className="flex items-center gap-2 text-zinc-600">
-            <Clock className="w-3.5 h-3.5 text-[#0052ff]" />
-            <span>24/7 Dedicated Helpdesk & NOC Dispatch</span>
-          </div>
-        </div>
-      </div>
-
-      {/* 2. Main Navigation Header */}
+      {/* Main Navigation Header */}
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
         
         {/* Clean Logo Brand */}
@@ -204,13 +175,13 @@ export default function Navbar() {
           >
             Industries
           </Link>
-   <Link
+          <Link
             href="/blogs"
             className={`transition-colors hover:text-[#0052ff] ${
               pathname === "/blogs" ? "text-[#0052ff] font-bold" : ""
             }`}
           >
-          Blogs
+            Blogs
           </Link>
           <Link
             href="/contact"
@@ -243,7 +214,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* 3. Mobile Responsive Drawer */}
+      {/* Mobile Responsive Drawer */}
       {isOpen && (
         <div className="lg:hidden border-t border-zinc-200 bg-white px-6 py-6 space-y-4 shadow-2xl max-h-[calc(100vh-80px)] overflow-y-auto">
           <div className="space-y-2">
@@ -308,6 +279,14 @@ export default function Navbar() {
               className="block py-2 text-base font-semibold text-zinc-600 hover:text-[#0052ff]"
             >
               Industries
+            </Link>
+
+            <Link
+              href="/blogs"
+              onClick={() => setIsOpen(false)}
+              className="block py-2 text-base font-semibold text-zinc-600 hover:text-[#0052ff]"
+            >
+              Blogs
             </Link>
 
             <Link
