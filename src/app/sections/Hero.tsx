@@ -39,7 +39,7 @@ export default function Hero() {
       {/* 1. Background Image */}
      {/* 1. Background Image with Blur */}
 <div
-  className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-[3px]  "
+  className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat  "
   style={{
     backgroundImage: `url('https://img.magnific.com/free-photo/santa-monica-pier-beach-los-angeles_649448-4112.jpg?semt=ais_hybrid&w=740&q=80')`,
   }}
