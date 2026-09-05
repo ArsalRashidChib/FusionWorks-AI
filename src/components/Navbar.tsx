@@ -75,6 +75,12 @@ export default function Navbar() {
       desc: "Back-office operations & executive management",
       icon: <UserCheck className="w-4 h-4 text-[#0052ff]" />,
     },
+    {
+      name: "Virtual & Administrative Assistant",
+      href: "/services/virtual-assistant",
+      desc: "Back-office operations & executive management",
+      icon: <UserCheck className="w-4 h-4 text-[#0052ff]" />,
+    },
   ];
 
   return (
