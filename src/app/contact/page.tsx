@@ -44,7 +44,7 @@ export default function ContactPage() {
       title: "Scoping & Inquiries",
       detail: "info@fusionworksai.com",
       href: "mailto:info@fusionworksai.com",
-      badge: "<15 Min Response Time",
+    
     },
   ];
 
@@ -57,10 +57,7 @@ export default function ContactPage() {
       icon: <Lock className="w-4 h-4 text-[#0052ff]" />,
       text: "Strict Mutual NDA Protection",
     },
-    {
-      icon: <Clock className="w-4 h-4 text-[#0052ff]" />,
-      text: "Onboarding in 5–7 Business Days",
-    },
+   
   ];
 
   return (
