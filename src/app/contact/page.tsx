@@ -35,8 +35,8 @@ export default function ContactPage() {
     {
       icon: <Phone className="w-5 h-5 text-[#0052ff]" />,
       title: "Direct Phone Line",
-      detail: "(123) 456-7890",
-      href: "tel:1234567890",
+      detail: "(949) 287-3678",
+      href:"tel:9492873678",
       badge: "Available 24/7/365",
     },
     {

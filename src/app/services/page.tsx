@@ -5,6 +5,8 @@ import {
   Activity,
   MonitorCheck,
   TicketCheck,
+  Code2,
+  DatabaseZap,
   PhoneCall,
   TrendingUp,
   CalendarCheck,
@@ -18,7 +20,7 @@ import {
 export const metadata = {
   title: "Outsourced MSP & Enterprise IT Support Services | FusionWorks AI",
   description:
-    "Explore our complete catalog of white-label helpdesk, 24/7 NOC monitoring, inbound/outbound support, B2B lead generation, appointment setting, and virtual administrative support.",
+    "Explore our complete catalog of white-label helpdesk, 24/7 NOC monitoring, custom software development, data sciences, inbound/outbound support, B2B lead generation, appointment setting, and virtual administrative support.",
 };
 
 export default function ServicesPage() {
@@ -73,6 +75,32 @@ export default function ServicesPage() {
         "Structured multi-tier escalation pathways",
         "Real-time shift handoffs and audit-ready logging",
         "End-of-month SLA metrics and resolution reporting",
+      ],
+    },
+    {
+      slug: "software-development",
+      icon: <Code2 className="w-6 h-6 text-[#0052ff]" />,
+      title: "Software Development",
+      category: "Product Engineering",
+      summary: "Full-cycle custom web, mobile, and cloud software development alongside bespoke PSA and RMM middleware integrations.",
+      details: [
+        "Bespoke web applications & SaaS product architectures",
+        "Custom API integrations & bidirectional webhooks",
+        "Cross-platform mobile apps for iOS and Android",
+        "Legacy code modernization & SOC 2 security hardening",
+      ],
+    },
+    {
+      slug: "data-sciences",
+      icon: <DatabaseZap className="w-6 h-6 text-[#0052ff]" />,
+      title: "Data Sciences & Predictive Analytics",
+      category: "Advanced Intelligence",
+      summary: "Applied machine learning models, telemetry fault forecasting, automated ETL pipelines, and executive BI dashboards.",
+      details: [
+        "Predictive failure analysis from endpoint & server telemetry",
+        "Automated data pipelines & central data warehouse ingestion",
+        "NLP ticket classification & sentiment analysis scoring",
+        "Executive business intelligence & customer churn prediction",
       ],
     },
     {
@@ -152,10 +180,11 @@ export default function ServicesPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-zinc-600 max-w-3xl mx-auto leading-relaxed font-normal">
-Tailored Solutions to Fuel Your GrowthWe engineer custom business process outsourcing (BPO) solutions that combine automated speed with human intelligence. Whatever your business needs to scale, we have a specialized team ready to deliver.          </p>
+            Tailored solutions to fuel your growth. We engineer custom business process outsourcing (BPO) solutions that combine automated speed with human intelligence. Whatever your business needs to scale, we have a specialized team ready to deliver.
+          </p>
         </section>
 
-        {/* Services Grid (8 Services) */}
+        {/* Services Grid (10 Services) */}
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-stretch">
           {serviceList.map((svc) => (
             <div

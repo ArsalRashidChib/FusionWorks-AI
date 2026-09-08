@@ -39,9 +39,9 @@ export default function Hero() {
       {/* 1. Background Image */}
      {/* 1. Background Image with Blur */}
 <div
-  className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat blur-[3px]  "
+  className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat  "
   style={{
-    backgroundImage: `url('https://media.istockphoto.com/id/1571494714/photo/view-of-golden-gate-bridge.jpg?s=612x612&w=0&k=20&c=VYSXTGOPzkNrXOY_UfNJMksDB8_iMLgF0m7FUuKdqnU=')`,
+    backgroundImage: `url('https://images.unsplash.com/photo-1580629844914-374f3b707fe5?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhbGlmb3JuaWElMjBzdW5zZXR8ZW58MHx8MHx8fDA%3D')`,
   }}
 />
 
@@ -69,8 +69,8 @@ Where Human Heart Meets AI EfficiencyAt Fusion AI Works, we don't just resolve t
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-1">
-              <a
-                href="tel:1234567890"
+              <a 
+                href="tel:9492873678"
                 className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#0052ff] hover:bg-[#0045d8] active:scale-95 text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2.5 transition-all shadow-lg shadow-[#0052ff]/30 hover:shadow-[#0052ff]/50"
               >
                 <PhoneCall className="w-4 h-4" />

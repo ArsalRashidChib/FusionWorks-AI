@@ -124,11 +124,11 @@ export default function Footer() {
             
             <div className="space-y-3 text-sm">
               <a
-                href="tel:1234567890"
+                  href="tel:9492873678"
                 className="flex items-center gap-3 p-3 rounded-xl border border-zinc-200 bg-zinc-50/60 text-zinc-700 hover:text-zinc-950 hover:border-[#0052ff]/50 transition-all"
               >
                 <Phone className="w-4 h-4 text-[#0052ff] flex-shrink-0" />
-                <span className="font-semibold text-xs sm:text-sm">(123) 456-7890</span>
+                <span className="font-semibold text-xs sm:text-sm">(949) 287-3678</span>
               </a>
 
               <a

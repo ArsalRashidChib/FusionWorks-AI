@@ -46,7 +46,7 @@ export default function CtaBanner() {
               </Link>
 
               <a
-                href="tel:1234567890"
+                  href="tel:9492873678"
                 className="w-full sm:w-auto px-8 py-4 rounded-xl border border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-900 font-semibold text-sm sm:text-base flex items-center justify-center gap-2.5 transition-all hover:border-[#0052ff]/40 active:scale-95 shadow-sm"
               >
                 <PhoneCall className="w-4 h-4 text-[#0052ff]" />

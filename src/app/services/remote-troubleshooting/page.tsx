@@ -118,11 +118,11 @@ export default function RemoteTroubleshootingPage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:1234567890"
+                href="tel:9492873678"
                 className="w-full sm:w-auto px-7 py-4 rounded-xl border border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-900 font-semibold text-sm flex items-center justify-center gap-2.5 transition-all shadow-sm hover:border-[#0052ff]/40"
               >
                 <PhoneCall className="w-4 h-4 text-[#0052ff]" />
-                <span>(123) 456-7890</span>
+                <span>(949) 287-3678</span>
               </a>
             </div>
           </div>

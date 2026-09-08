@@ -1,7 +1,7 @@
-// src/app/services/appointment-setting/page.tsx
+// src/app/services/software-development/page.tsx
 import Link from "next/link";
 import {
-  CalendarCheck,
+  Code2,
   CheckCircle2,
   ArrowRight,
   ShieldCheck,
@@ -11,63 +11,63 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "B2B Appointment Setting Services | FusionWorks AI",
+  title: "Custom Software Development & API Integration | FusionWorks AI",
   description:
-    "White-label B2B appointment setting services. Verified decision-maker discovery, strict BANT qualification, calendar syncing, and confirmed sales meetings for scaling MSPs and tech firms.",
+    "End-to-end custom software engineering, modern web and mobile application development, enterprise cloud architectures, and bespoke PSA/RMM tool integrations for scaling tech providers.",
   keywords: [
-    "B2B Appointment Setting Services",
-    "Outsourced Appointment Setting MSP",
-    "Sales Meeting Scheduling",
-    "BANT Lead Qualification",
-    "Decision Maker Discovery",
-    "Calendar Booking BPO",
-    "Tech Sales Development",
-    "Outbound Meeting Generation",
+    "Custom Software Development",
+    "MSP Software Engineering",
+    "API Integrations BPO",
+    "Cloud Application Development",
+    "Full-Stack Web Development",
+    "Mobile App Development",
+    "Next.js React Node.js Development",
+    "Internal Tooling Automation",
   ],
 };
 
-export default function AppointmentSettingPage() {
+export default function SoftwareDevelopmentPage() {
   const coreDeliverables = [
     {
-      title: "Strict BANT & ICP Qualification Framework",
-      desc: "Every scheduled meeting is vetted against strict Budget, Authority, Need, and Timeline (BANT) parameters to eliminate unqualified prospect conversations.",
+      title: "Custom Cloud & SaaS Application Engineering",
+      desc: "Architecting resilient, multi-tenant web platforms, internal client portals, and microservices powered by modern Next.js, React, Node.js, and TypeScript stacks.",
     },
     {
-      title: "Direct Calendar Synchronization & Scheduling",
-      desc: "Seamless booking directly into your executive sales representatives' Google Calendar, Outlook 365, Calendly, or HubSpot scheduling links.",
+      title: "Bespoke PSA, RMM & Third-Party API Integrations",
+      desc: "Custom middleware connecting ConnectWise, HaloPSA, Datto, and proprietary databases with bidirectional webhooks, automated data syncs, and custom dashboards.",
     },
     {
-      title: "Pre-Call Briefing Packets & Intelligence Dossiers",
-      desc: "Comprehensive meeting preparation notes delivered before each call detailing company headcounts, identified pain points, and existing technology toolchains.",
+      title: "Mobile App Development & Cross-Platform Solutions",
+      desc: "High-performance iOS and Android applications developed with Flutter and React Native, featuring secure biometric authentication, offline synchronization, and push notifications.",
     },
     {
-      title: "Multi-Touch Reminders & Show-Up Optimization",
-      desc: "Automated SMS, calendar invitations, and personalized email reminder cadences engineered to keep no-show rates under 5%.",
+      title: "Legacy Code Refactoring & Security Hardening",
+      desc: "Modernizing monolithic architectures into scalable containers, remediating vulnerability backlogs, optimizing database queries, and enforcing OWASP Top 10 defenses.",
     },
   ];
 
-  const performanceMetrics = [
-    { value: "<5%", label: "Target Prospect No-Show Rate" },
-    { value: "100%", label: "Verified Executive Decision-Makers" },
-    { value: "Direct Sync", label: "Google / Outlook / HubSpot" },
-    { value: "Detailed", label: "Pre-Meeting Intelligence Dossier" },
+  const engineeringMetrics = [
+    { value: "99.99%", label: "Deployment Reliability Target" },
+    { value: "SOC 2", label: "Aligned DevSecOps Standards" },
+    { value: "100%", label: "Source Code & IP Ownership" },
+    { value: "Agile", label: "Bi-Weekly Sprint Releases" },
   ];
 
-  const onboardingPhases = [
+  const developmentLifecycle = [
     {
       step: "01",
-      title: "Ideal Customer Profile & Qualification Criteria",
-      desc: "We establish precise qualification rules, required prospect titles (C-Level, VP, IT Director), revenue thresholds, and non-negotiable criteria.",
+      title: "Discovery & System Architecture Design",
+      desc: "We analyze technical constraints, define database schemas, document API contracts, and establish modular architectural blueprints.",
     },
     {
       step: "02",
-      title: "Calendar Integration & Outreach Cadence",
-      desc: "Configuring calendar availability, buffer rules, custom email meeting invites, and multi-channel phone and email booking workflows.",
+      title: "Agile Sprints & Automated CI/CD Pipelines",
+      desc: "Test-driven engineering sprints with automated unit testing, static code analysis, and continuous deployment environments for live stakeholder reviews.",
     },
     {
       step: "03",
-      title: "Live Booking Launch & Performance Reporting",
-      desc: "Our appointment specialists initiate targeted outreach, booking vetted meetings with instant calendar alerts and complete dossier attachments.",
+      title: "Security Audits, Deployment & Maintenance",
+      desc: "Comprehensive penetration testing, zero-downtime production deployment, complete documentation handover, and ongoing telemetry support.",
     },
   ];
 
@@ -95,18 +95,18 @@ export default function AppointmentSettingPage() {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0052ff]/20 bg-[#0052ff]/10 text-[#0052ff] text-xs font-semibold tracking-wide">
               <ShieldCheck className="w-4 h-4 text-[#0052ff]" />
-              <span>Sales Pipeline Acceleration Operations</span>
+              <span>Full-Cycle Product Engineering</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-950 leading-tight">
-              B2B Appointment{" "}
+              Custom Software{" "}
               <span className="text-[#0052ff]">
-                Setting Services
+                Development
               </span>
             </h1>
 
             <p className="text-base sm:text-lg text-zinc-600 leading-relaxed font-normal">
-              Keep your senior account executives focused on closing deals. Our specialized SDRs engage high-intent decision-makers, verify purchasing authority, and place confirmed sales discovery calls directly onto your team&apos;s calendar.
+              Accelerate your engineering roadmap without the overhead of lengthy hiring cycles. From specialized PSA middleware and automated internal tools to enterprise SaaS platforms, our engineers deliver clean, scalable, and audit-ready software tailored to your operational specifications.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
@@ -131,16 +131,16 @@ export default function AppointmentSettingPage() {
           <div className="lg:col-span-5 p-8 rounded-3xl border border-zinc-200 bg-white shadow-xl shadow-zinc-200/50 space-y-6">
             <div className="flex items-center gap-3 border-b border-zinc-100 pb-4">
               <div className="p-2.5 bg-[#0052ff]/10 text-[#0052ff] rounded-xl border border-[#0052ff]/20">
-                <CalendarCheck className="w-6 h-6" />
+                <Code2 className="w-6 h-6" />
               </div>
               <div>
-                <h2 className="text-base font-bold text-zinc-950">Meeting Quality Benchmarks</h2>
-                <span className="text-xs text-zinc-500">Strict qualification thresholds</span>
+                <h2 className="text-base font-bold text-zinc-950">Engineering Benchmarks</h2>
+                <span className="text-xs text-zinc-500">Enterprise development standards</span>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {performanceMetrics.map((item, idx) => (
+              {engineeringMetrics.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-2xl border border-zinc-100 bg-zinc-50/70">
                   <div className="text-2xl font-extrabold text-[#0052ff] font-mono">{item.value}</div>
                   <div className="text-[11px] font-semibold text-zinc-600 mt-1">{item.label}</div>
@@ -154,13 +154,13 @@ export default function AppointmentSettingPage() {
         <section className="space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0052ff]">
-              Booking Capabilities
+              Technical Capabilities
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-950 tracking-tight">
-              High-Conversion Scheduling Architecture
+              End-to-End Application Architecture
             </h2>
             <p className="text-zinc-600 text-xs sm:text-sm">
-              Engineered to drive sales velocity and maximize your executive team&apos;s closing capacity.
+              Engineered with clean separation of concerns, high throughput, and robust data isolation.
             </p>
           </div>
 
@@ -186,15 +186,15 @@ export default function AppointmentSettingPage() {
         <section className="p-8 sm:p-12 rounded-3xl border border-zinc-200 bg-zinc-50/70 shadow-lg shadow-zinc-200/50 space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0052ff]">
-              Implementation Roadmap
+              Development Lifecycle
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-950 tracking-tight">
-              How We Fill Your Sales Calendar
+              How We Build & Ship Software
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {onboardingPhases.map((phase, idx) => (
+            {developmentLifecycle.map((phase, idx) => (
               <div
                 key={idx}
                 className="p-6 rounded-2xl border border-zinc-200 bg-white space-y-3 hover:border-[#0052ff]/40 hover:shadow-sm transition-all"
@@ -215,15 +215,15 @@ export default function AppointmentSettingPage() {
         <section className="max-w-5xl mx-auto">
           <div className="rounded-3xl border border-[#0052ff]/20 bg-gradient-to-br from-blue-50/60 via-white to-blue-50/30 p-10 sm:p-12 text-center space-y-6 shadow-xl shadow-[#0052ff]/5">
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#0052ff]">
-              <Sparkles className="w-4 h-4" /> Accelerate Deal Velocity
+              <Sparkles className="w-4 h-4" /> Production-Ready Code
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-zinc-950 tracking-tight">
-              Ready to Fill Your Pipeline With Decision-Makers?
+              Have a Custom Application or Integration in Mind?
             </h2>
 
             <p className="text-zinc-600 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-              Connect with our team to configure your BANT qualification filters, calendar rules, and outbound targeting criteria.
+              Connect with our technical architects to scope your requirements, define milestone deliverables, and launch your dedicated engineering sprint.
             </p>
 
             <div className="flex justify-center pt-2">
@@ -231,7 +231,7 @@ export default function AppointmentSettingPage() {
                 href="/contact"
                 className="px-8 py-4 rounded-xl bg-[#0052ff] hover:bg-[#0045d8] text-white font-bold text-sm sm:text-base flex items-center gap-2.5 transition-all shadow-lg shadow-[#0052ff]/25 active:scale-95"
               >
-                <span>Request Appointment Setting Proposal</span>
+                <span>Request Software Engineering Scope</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

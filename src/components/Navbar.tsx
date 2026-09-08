@@ -21,6 +21,8 @@ import {
   TrendingUp,
   CalendarCheck,
   UserCheck,
+  Code2,
+  DatabaseZap,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -54,6 +56,18 @@ export default function Navbar() {
       icon: <TicketCheck className="w-4 h-4 text-[#0052ff]" />,
     },
     {
+      name: "Software Development",
+      href: "/services/software-development",
+      desc: "Custom web, mobile & cloud application engineering",
+      icon: <Code2 className="w-4 h-4 text-[#0052ff]" />,
+    },
+    {
+      name: "Data Sciences",
+      href: "/services/data-sciences",
+      desc: "Predictive analytics, data pipelines & AI modeling",
+      icon: <DatabaseZap className="w-4 h-4 text-[#0052ff]" />,
+    },
+    {
       name: "Inbound & Outbound Customer Support",
       href: "/services/customer-support",
       desc: "Omnichannel customer voice & chat support",
@@ -82,7 +96,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-zinc-200 text-zinc-900 shadow-md">
       {/* 1. Top Utility Info Bar */}
-      <div className="hidden lg:block bg-zinc-50 text-zinc-600 text-xs font-medium border-b border-zinc-200">
+      {/* <div className="hidden lg:block bg-zinc-50 text-zinc-600 text-xs font-medium border-b border-zinc-200">
         <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <a
@@ -106,7 +120,7 @@ export default function Navbar() {
             <span>24/7 Dedicated Helpdesk & NOC Dispatch</span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* 2. Main Navigation Header */}
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
@@ -163,7 +177,7 @@ export default function Navbar() {
             </Link>
 
             {/* Dropdown Menu Box */}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[700px] bg-white border border-zinc-200 shadow-2xl rounded-2xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 -translate-y-2 group-hover:translate-y-0 grid grid-cols-2 gap-2">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[760px] bg-white border border-zinc-200 shadow-2xl rounded-2xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 -translate-y-2 group-hover:translate-y-0 grid grid-cols-2 gap-2">
               {serviceDropdown.map((item, idx) => (
                 <Link
                   key={idx}
@@ -204,14 +218,16 @@ export default function Navbar() {
           >
             Industries
           </Link>
-   <Link
+
+          <Link
             href="/blogs"
             className={`transition-colors hover:text-[#0052ff] ${
               pathname === "/blogs" ? "text-[#0052ff] font-bold" : ""
             }`}
           >
-          Blogs
+            Blogs
           </Link>
+
           <Link
             href="/contact"
             className={`transition-colors hover:text-[#0052ff] ${
@@ -308,6 +324,14 @@ export default function Navbar() {
               className="block py-2 text-base font-semibold text-zinc-600 hover:text-[#0052ff]"
             >
               Industries
+            </Link>
+
+            <Link
+              href="/blogs"
+              onClick={() => setIsOpen(false)}
+              className="block py-2 text-base font-semibold text-zinc-600 hover:text-[#0052ff]"
+            >
+              Blogs
             </Link>
 
             <Link
