@@ -6,7 +6,7 @@ import HowItWorks from "./sections/HowItWorks";
 import IndustriesBadges from "./sections/IndustriesBadges";
 import CtaBanner from "./sections/CtaBanner";
 import CorePillars from "./sections/Core-Pillars";
-
+import FAQs from "./sections/FAQs";
 
 export default function Home() {
   return (
@@ -23,7 +23,9 @@ export default function Home() {
               <HowItWorks />
               
               <IndustriesBadges />
-
+              
+              <FAQs />
+             
               <CtaBanner />
     </>
   );

@@ -5,20 +5,20 @@ import { useState } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
-  CheckCircle2,
   PhoneCall,
-  ShieldCheck,
+  Activity,
   Headphones,
-  Zap,
+  CheckCircle2,
+  TrendingUp,
+  ShieldCheck,
+  Zap
 } from "lucide-react";
 
 export default function Hero() {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
     email: "",
     service: "",
-    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -26,175 +26,150 @@ export default function Hero() {
     console.log("Form Submitted:", formData);
   };
 
-  const trustBadges = [
-    "24/7/365 Coverage",
-    "15-Min Response Time",
-    "No Long-Term Lock-in",
-    "Tier 1 & Tier 2 Certified",
-    "Seamless PSA/RMM Integration",
-  ];
-
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#070b14] text-white selection:bg-[#0052ff] selection:text-white">
-      {/* 1. Background Image */}
-     {/* 1. Background Image with Blur */}
-<div
-  className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat  "
-  style={{
-    backgroundImage: `url('https://images.unsplash.com/photo-1580629844914-374f3b707fe5?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhbGlmb3JuaWElMjBzdW5zZXR8ZW58MHx8MHx8fDA%3D')`,
-  }}
-/>
+    <div className="relative bg-white w-full overflow-hidden flex flex-col">
+      
+      {/* 
+        ========================================================================
+        1. THE ANGLED HERO BACKGROUND
+        ========================================================================
+        Uses a complex mesh gradient (Blue, Emerald, Orange) to create a warm, 
+        premium tech feel, cut dynamically at the bottom.
+      */}
+      <div 
+        className="relative w-full pb-32 pt-20 lg:pt-32 lg:pb-48 overflow-visible"
+        style={{
+          clipPath: "polygon(0 0, 100% 0, 100% 88%, 0% 100%)",
+          backgroundColor: "#0b1121", // Deep navy base
+        }}
+      >
+        {/* Blurred Mesh Gradient Orbs */}
+        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[70%] bg-emerald-500/20 blur-[130px] rounded-full pointer-events-none" />
+        <div className="absolute top-[10%] right-[-10%] w-[60%] h-[80%] bg-orange-500/20 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-[-10%] left-[20%] w-[50%] h-[60%] bg-[#0052ff]/40 blur-[120px] rounded-full pointer-events-none" />
+        
+        {/* Subtle grid overlay for texture */}
+        <div 
+          className="absolute inset-0 z-0 opacity-10 pointer-events-none" 
+          style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '32px 32px' }}
+        />
 
-      {/* 2. Gradient Overlay (Transparent top fading into Black at bottom) */}
-<div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#000000]/30 via-[#000000]/30 to-[#000000]/50" />
-      {/* Main Content Grid */}
-      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-28 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center">
-          
-          {/* Left Column: Value Messaging */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
-          
-
-            {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-white leading-[1.12] drop-shadow-md">
-              24/7 Coverage{" "}
-              <span className="text-[#ffffff]">
-Customer Support and Outsourcing              </span>
-            </h1>
-
-            {/* Description */}
-            <p className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal drop-shadow-sm">
-Where Human Heart Meets AI EfficiencyAt Fusion AI Works, we don't just resolve tickets—we design seamless experiences. We are a next-generation contact center bridging the gap between innovative technology and real human empathy. By automating the routine and personalizing the complex, we give your business 24/7/365 coverage while drastically reducing operational costs.            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-1">
-              <a 
-                href="tel:9492873678"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#0052ff] hover:bg-[#0045d8] active:scale-95 text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-2.5 transition-all shadow-lg shadow-[#0052ff]/30 hover:shadow-[#0052ff]/50"
-              >
-                <PhoneCall className="w-4 h-4" />
-                <span>Call Now</span>
-              </a>
-              <Link
-                href="/services"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl border border-white/20 bg-slate-900/60 hover:bg-slate-800/80 active:scale-95 text-slate-100 font-semibold text-sm sm:text-base backdrop-blur-md transition-all hover:border-[#0052ff]/50 flex items-center justify-center"
-              >
-                Explore Services
-              </Link>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="pt-6 sm:pt-8 border-t border-slate-700/50">
-              <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center lg:justify-start gap-x-6 gap-y-3 text-xs sm:text-sm font-medium text-slate-200">
-                {trustBadges.map((badge, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-left">
-                    <CheckCircle2 className="w-4 h-4 text-[#0052ff] flex-shrink-0" />
-                    <span className="drop-shadow-sm">{badge}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Corporate Form Card */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="w-full max-w-md bg-white text-zinc-900 rounded-3xl p-6 sm:p-8 md:p-9 shadow-2xl shadow-black/80 border border-zinc-200">
-              <div className="text-center mb-6">
-                <span className="inline-block p-2 rounded-xl bg-[#0052ff]/10 text-[#0052ff] mb-2">
-                  <Headphones className="w-5 h-5" />
+            {/* Left Column: Typography & CTAs */}
+            <div className="lg:col-span-6 space-y-8 text-center lg:text-left">
+              <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-black tracking-tight text-white leading-[1.1]">
+               24/7 
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-white to-blue-100">
+                  Coverage Customer Support and Outsourcing
                 </span>
-                <h3 className="text-2xl font-bold text-black tracking-tight">
-                  Request a Free Quote
-                </h3>
-                <p className="text-xs text-zinc-500 mt-1 font-medium">
-                  Custom SLA coverage plans delivered within 24 hours.
-                </p>
-              </div>
+              </h1>
 
-              <form onSubmit={handleSubmit} className="space-y-3.5">
-                <div>
-                  <label className="sr-only">Your Name</label>
+              <p className="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed">
+ We don't just resolve tickets — we design seamless experiences giving your business 24/7 coverage while drastically reducing operational costs.              </p>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                <a 
+                  href="tel:9492873678"
+                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#0052ff] hover:bg-blue-600 active:scale-95 text-white font-bold text-sm flex items-center justify-center gap-2.5 transition-all shadow-lg shadow-[#0052ff]/30"
+                >
+                  <PhoneCall className="w-4 h-4" />
+                  <span>Start Now</span>
+                </a>
+                <Link
+                  href="/services"
+                  className="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 active:scale-95 text-white font-bold text-sm backdrop-blur-md transition-all flex items-center justify-center gap-2.5 group"
+                >
+                  <span>Explore Services</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Column: Floating Native UI Composition */}
+            <div className="lg:col-span-6 relative flex justify-center items-center min-h-[400px] lg:min-h-[500px]">
+              
+              {/* Central Element: The Functional Quote Form dressed as a Glass Widget */}
+              <div className="relative z-20 w-full max-w-[380px] bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 shadow-2xl shadow-black/50 lg:translate-x-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2.5 bg-[#0052ff] rounded-xl text-white shadow-inner">
+                    <Zap className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white leading-tight">Fast-Track Setup</h3>
+                    <p className="text-xs text-blue-200">Get your custom SLA today.</p>
+                  </div>
+                </div>
+
+                <form onSubmit={handleSubmit} className="space-y-3">
                   <input
                     type="text"
                     required
-                    placeholder="Your Full Name"
+                    placeholder="Full Name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-black text-sm focus:outline-none focus:ring-2 focus:ring-[#0052ff] focus:bg-white focus:border-transparent transition-all placeholder:text-zinc-400"
+                    className="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-white text-sm focus:outline-none focus:border-[#0052ff] transition-colors placeholder:text-slate-400"
                   />
-                </div>
-
-                <div>
-                  <label className="sr-only">Phone Number</label>
-                  <input
-                    type="tel"
-                    required
-                    placeholder="Phone Number"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-black text-sm focus:outline-none focus:ring-2 focus:ring-[#0052ff] focus:bg-white focus:border-transparent transition-all placeholder:text-zinc-400"
-                  />
-                </div>
-
-                <div>
-                  <label className="sr-only">Email Address</label>
                   <input
                     type="email"
                     required
-                    placeholder="Work Email Address"
+                    placeholder="Work Email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-black text-sm focus:outline-none focus:ring-2 focus:ring-[#0052ff] focus:bg-white focus:border-transparent transition-all placeholder:text-zinc-400"
+                    className="w-full px-4 py-3 rounded-xl bg-black/20 border border-white/10 text-white text-sm focus:outline-none focus:border-[#0052ff] transition-colors placeholder:text-slate-400"
                   />
-                </div>
-
-                <div>
-                  <label className="sr-only">Select Service</label>
-                  <select
-                    required
-                    value={formData.service}
-                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-[#0052ff] focus:bg-white focus:border-transparent transition-all truncate"
+                  <button
+                    type="submit"
+                    className="w-full py-3.5 px-6 rounded-xl bg-white hover:bg-slate-100 text-[#0052ff] font-bold text-sm tracking-wide transition-all shadow-md mt-2 flex justify-center items-center gap-2"
                   >
-                    <option value="" disabled>Select Service Needed</option>
-                    <option value="helpdesk-support">Helpdesk Support (Tier 1 & Tier 2)</option>
-                    <option value="after-hours-monitoring">After-Hours NOC Monitoring</option>
-                    <option value="remote-troubleshooting">Remote Troubleshooting</option>
-                    <option value="ticket-management">Ticket Management</option>
-                    <option value="customer-support">Inbound / Outbound Customer Support</option>
-                    <option value="lead-generation">Inbound / Outbound Lead Generation</option>
-                    <option value="appointment-setting">Appointment Setting</option>
-                    <option value="virtual-assistant">Virtual / Administrative Assistant</option>
-                  </select>
-                </div>
+                    <span>Request Proposal</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </form>
+              </div>
 
-                <div>
-                  <label className="sr-only">Your Message</label>
-                  <textarea
-                    required
-                    rows={3}
-                    placeholder="How can we help? (e.g. current pain points, requirements)"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-black text-sm focus:outline-none focus:ring-2 focus:ring-[#0052ff] focus:bg-white focus:border-transparent transition-all placeholder:text-zinc-400 resize-none"
-                  />
-                </div>
+              
 
-                <button
-                  type="submit"
-                  className="w-full py-3.5 px-6 rounded-xl bg-[#0052ff] hover:bg-[#0045d8] text-white font-semibold text-sm tracking-wide transition-all shadow-md shadow-[#0052ff]/25 hover:shadow-lg hover:shadow-[#0052ff]/35 active:scale-[0.98] flex items-center justify-center gap-2 mt-2 group"
-                >
-                  <Zap className="w-4 h-4 text-white fill-white group-hover:scale-110 transition-transform" />
-                  <span>Request Custom Proposal</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform ml-auto" />
-                </button>
-              </form>
             </div>
           </div>
-
         </div>
       </div>
-    </section>
+
+      {/* 
+        ========================================================================
+        2. THE LOWER CONTENT SECTION
+        ========================================================================
+      */}
+      <div className="relative z-20 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 lg:py-24 w-full -mt-10 lg:-mt-20">
+        <div className="max-w-3xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0b1121] tracking-tight leading-[1.15]">
+            Empowering Businesses with <br className="hidden sm:block" />
+            <span className="text-[#0052ff]">Intelligent Solutions</span>
+          </h2>
+          
+          <p className="mt-6 text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+            FusionWorks AI is a trusted partner for businesses seeking to streamline operations, enhance customer experiences, and scale efficiently. With a strong foundation in BPO, IT services, and back-office support, we combine people, process, and technology to deliver measurable value. Our commitment to quality, innovation, and client satisfaction has helped us build long-term partnerships across industries from startups to global enterprises.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-6 text-sm font-bold text-slate-700">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+              <span>BPO & Back-Office Support</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-5 h-5 text-[#0052ff]" />
+              <span>Secure IT Services</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-orange-500" />
+              <span>Scalable Operations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   );
 }

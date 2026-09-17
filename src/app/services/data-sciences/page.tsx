@@ -160,7 +160,7 @@ export default function DataSciencesPage() {
               Applied Machine Learning & Data Engineering
             </h2>
             <p className="text-zinc-600 text-xs sm:text-sm">
-              Engineered with production-grade reliability, automated data cleansing, and explainable models.
+              Engineered with production-grade reliability, Large Language Model (LLM) integration cleansing, and explainable models.
             </p>
           </div>
 

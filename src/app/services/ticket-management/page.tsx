@@ -33,7 +33,7 @@ export default function TicketManagementPage() {
       desc: "Instant categorization, priority tagging, and technician allocation directly inside your existing ConnectWise, HaloPSA, Autotask, Datto, or Kaseya instances.",
     },
     {
-      title: "Strict SLA Clock Enforcement & Escalations",
+      title: "Strict SLA Enforcement & Escalations",
       desc: "Continuous surveillance of first-response and resolution timelines, triggering automated escalations to prevent contractual SLA breaches.",
     },
     {
@@ -135,7 +135,7 @@ export default function TicketManagementPage() {
               </div>
               <div>
                 <h2 className="text-base font-bold text-zinc-950">Queue Dispatch Benchmarks</h2>
-                <span className="text-xs text-zinc-500">Strict SLA clock management</span>
+                <span className="text-xs text-zinc-500">Strict SLA management</span>
               </div>
             </div>
 
