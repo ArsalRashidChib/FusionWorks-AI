@@ -353,11 +353,11 @@ export default function Navbar() {
             </Link>
 
             <a
-              href="tel:1234567890"
+              href="tel:(949) 287-3678"
               className="flex items-center justify-center gap-2 py-3 border border-zinc-200 bg-zinc-50 rounded-xl text-zinc-700 font-semibold text-sm hover:bg-zinc-100 transition-colors"
             >
               <Phone className="w-4 h-4 text-[#0052ff]" />
-              <span>(123) 456-7890</span>
+              <span>(949) 287-3678</span>
             </a>
           </div>
         </div>
