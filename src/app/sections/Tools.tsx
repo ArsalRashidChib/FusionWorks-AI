@@ -62,13 +62,13 @@ export default function TrustTools() {
   );
 
   return (
-    <section className="relative w-full border-y border-slate-100 bg-slate-50/50 py-16 overflow-hidden selection:bg-[#0052ff] selection:text-white">
+    <section className="relative w-full border-y border-slate-100 bg-white py-16 overflow-hidden selection:bg-[#0052ff] selection:text-white">
       
       {/* Subtle Premium Background Mesh */}
       <div 
-        className="absolute inset-0 z-0 opacity-[0.4] pointer-events-none"
+        className="absolute inset-0 z-0 opacity-[0.25] pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(#94a3b8 1px, transparent 1px)',
           backgroundSize: '32px 32px'
         }}
       />
