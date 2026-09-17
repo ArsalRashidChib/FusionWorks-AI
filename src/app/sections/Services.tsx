@@ -26,7 +26,7 @@ export default function Services() {
         "Hardware and peripheral triage & remote fixes",
         "Branded communication via portal, email & voice",
       ],
-      metric: "<15 Min (if required)",
+      metric: "<15 Min",
       metricLabel: "Response SLA",
     },
     {

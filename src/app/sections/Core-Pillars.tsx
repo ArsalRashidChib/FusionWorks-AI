@@ -29,7 +29,7 @@ export default function CorePillars() {
       badge: "Instant Resolution",
       badgeStyle: "bg-cyan-50 text-cyan-600 border-cyan-200",
       desc: "Our AI-powered workflows sort, route, and resolve simple inquiries instantly to keep response times under minutes.",
-      detail: "<15 Min First Touch *if required",
+      detail: "<15 Min First Touch ",
       detailColor: "text-cyan-600",
     },
     {
